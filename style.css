@@ -45,10 +45,10 @@ section{padding: 5rem 0;}
 .shop-section .shop-contents .shop-title h2.active{border-bottom: 5px solid black;}
 
 .shop-section .shop-preview-box{width:65%; display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem; color: #222;}
-.shop-section .pre-item-box{width: 33.33%;}
-.shop-section .pre-item-box img{width: 100%;}
-.shop-section .pre-item-box .num-box{display: flex; column-gap: 1rem; margin: 1rem 0;}
-.shop-section .pre-item-box .brand-name{display: block; font-size: 1.75rem; margin-bottom: 1.5rem; color: #222;}
+.shop-section .shop-preview-box .shop-pre-item{width: 33.33%;}
+.shop-section .shop-preview-box .shop-pre-item img{width: 100%;}
+.shop-section .shop-preview-box .shop-pre-item .num-box{display: flex; column-gap: 1rem; margin: 1rem 0;}
+.shop-section .shop-preview-box .shop-pre-item .brand-name{display: block; font-size: 1.75rem; margin-bottom: 1.5rem; color: #222;}
 
 .video-section{width: 100%; height: 70vh; position: relative; display: flex; align-items: center;}
 .video-section video{width: 100%; height: 100%; object-fit: cover; position: absolute;}
@@ -58,3 +58,12 @@ section{padding: 5rem 0;}
 .video-section .video-container .video-txt-box .video-btn{color: #fff; border-bottom: 1px solid #fff; opacity: 0.6; padding-bottom: .5rem; font-size: 1rem; width: fit-content;}
 .video-section .video-container .video-txt-box h1{font-size: 4rem; font-weight: normal;}
 .video-section .video-container .video-txt-box h3{font-size: 1rem; font-weight: normal;}
+
+.video-section .video-icon{width: 1.5rem; position: absolute; right:.5rem; bottom: .5rem; opacity: .9;}
+
+/* Books Section Style */
+.books-section .books-title-box{display: flex;}
+.books-section .books-preview-box{display: flex; width: 65%;}
+.books-section .books-preview-box .books-pre-item{width: 33.33%;}
+.books-section .books-pre-item a{width: 100%;}
+.books-section .books-pre-item a img{width: 100%;}
