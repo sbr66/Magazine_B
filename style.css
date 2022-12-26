@@ -35,21 +35,22 @@ section{padding: 5rem 0;}
 .main-section .page-box{display: flex; justify-content: space-between; font-size: 5.5rem; padding: 0 5rem; color: #fff; position: relative; top: 15rem;}
 
 /* Shop Section Style */
-.shop-section{width: 100%; height: auto; background: rgb(152, 192, 196); position: relative;}
-.shop-section .container > p{color: black; opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
+.shop-section{width: 100%; height: auto; background: rgb(152, 192, 196); color: #222; position: relative;}
+.shop-section .container > p{opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
 .shop-section .container .shop-btn{position: absolute; bottom: 7.5rem; right: 5rem;}
 .shop-section .container .shop-btn a{display: flex; column-gap: 1.5rem;  font-size: 6rem; color: #fff; opacity: 0.5;}
 
 .shop-section .shop-contents .shop-title{display: flex; column-gap: .5rem;}
 .shop-section .shop-contents .shop-title h2{font-size: 3.5rem; cursor: pointer;}
-.shop-section .shop-contents .shop-title h2.active{border-bottom: 5px solid black;}
+.shop-section .shop-contents .shop-title h2.active{border-bottom: 5px solid #222;}
 
-.shop-section .shop-preview-box{width:65%; display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem; color: #222;}
+.shop-section .shop-preview-box{width:65%; display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem;}
 .shop-section .shop-preview-box .shop-pre-item{width: 33.33%;}
 .shop-section .shop-preview-box .shop-pre-item img{width: 100%;}
 .shop-section .shop-preview-box .shop-pre-item .num-box{display: flex; column-gap: 1rem; margin: 1rem 0;}
 .shop-section .shop-preview-box .shop-pre-item .brand-name{display: block; font-size: 1.75rem; margin-bottom: 1.5rem; color: #222;}
-
+.shop-section .shop-preview-box .shop-pre-item .brand-desc{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; overflow: hidden; padding-right: 2.5rem;}
+/* Video Section Style */
 .video-section{width: 100%; height: 70vh; position: relative; display: flex; align-items: center;}
 .video-section video{width: 100%; height: 100%; object-fit: cover; position: absolute;}
 .video-section .video-container{position: relative; z-index: 10;}
@@ -62,8 +63,17 @@ section{padding: 5rem 0;}
 .video-section .video-icon{width: 1.5rem; position: absolute; right:.5rem; bottom: .5rem; opacity: .9;}
 
 /* Books Section Style */
-.books-section .books-title-box{display: flex;}
-.books-section .books-preview-box{display: flex; width: 65%;}
-.books-section .books-preview-box .books-pre-item{width: 33.33%;}
+
+.books-section{background: rgb(242, 242, 242); position: relative; color: #222;}
+.books-section .books-container > p{opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
+.books-section .books-title-box{display: flex; column-gap: 0.5rem;}
+.books-section .books-title-box h2{font-size: 3.5rem; cursor: pointer;}
+.books-section .books-preview-box{display: flex; width: 65%; column-gap: 2.5rem; margin: 5rem 0 15rem 0;}
+.books-section .books-preview-box .books-pre-item{width: 33.33%; display: flex; flex-direction: column; row-gap: 1rem;}
 .books-section .books-pre-item a{width: 100%;}
 .books-section .books-pre-item a img{width: 100%;}
+.books-section .books-pre-item .book-name{color: #222; font-size: 1.75rem;}
+.books-section .books-pre-item .book-desc{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; overflow: hidden; padding-right: 2.5rem;}
+
+.books-section .books-btn{display: flex; column-gap: 1.5rem; font-size: 6rem; color: #fff; position: absolute; bottom: 7.5rem; right: 5rem;}
+
