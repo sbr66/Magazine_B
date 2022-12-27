@@ -63,7 +63,6 @@ section{padding: 5rem 0;}
 .video-section .video-icon{width: 1.5rem; position: absolute; right:.5rem; bottom: .5rem; opacity: .9;}
 
 /* Books Section Style */
-
 .books-section{background: rgb(242, 242, 242); position: relative; color: #222;}
 .books-section .books-container > p{opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
 .books-section .books-title-box{display: flex; column-gap: 0.5rem;}
@@ -77,3 +76,11 @@ section{padding: 5rem 0;}
 
 .books-section .books-btn{display: flex; column-gap: 1.5rem; font-size: 6rem; color: #fff; position: absolute; bottom: 7.5rem; right: 5rem;}
 
+/* Subscribe Section Style */
+.subscribe-section{color: #222;}
+.subscribe-section .subscribe-container{display: flex;}
+.subscribe-section .date-box{font-size: 4rem;}
+.subscribe-section .subscribe-content-box{display: flex; width: 50%;}
+.subscribe-section .subscribe-content-box > div { width: 50%;}
+.subscribe-section .subscribe-content-box .content-item{color: #222;}
+.subscribe-section .subscribe-content-box .content-item h3{font-size: 1.75rem;}
