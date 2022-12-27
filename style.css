@@ -14,8 +14,8 @@ section{padding: 5rem 0;}
 #header{width: 100%; padding: 1.25rem 0; backdrop-filter: blur(50px) brightness(95%); position:fixed; z-index:20;}
 #header > .container {display: flex; justify-content: space-between; font-size: 1.25rem;}
 #header .left {display: flex;}
-#header .left .logo a {display: flex; height: 1.5rem; _width: 1.25rem; margin-right: 2.5rem;}/*block으로 지정하면 왜 이미지 아래에 틈이 생기는지?*/
-#header .left .logo img {width: 100%;}
+#header .left .logo a {display: flex; height: 1.5rem; _width: 1.25rem; margin-right: 2.5rem;}
+#header .left .logo img {height: 100%;}
 #header .left .left-list {display: flex; column-gap: 1.25rem;}
 #header .left .left-list a {color: #fff;}
 
@@ -42,7 +42,7 @@ section{padding: 5rem 0;}
 
 .shop-section .shop-contents .shop-title{display: flex; column-gap: .5rem;}
 .shop-section .shop-contents .shop-title h2{font-size: 3.5rem; cursor: pointer;}
-.shop-section .shop-contents .shop-title h2.active{border-bottom: 5px solid #222;}
+.shop-section .shop-contents .shop-title h2.active::after{content: ''; display: block; width: 95%; height: .3rem; background: #222; margin-top: .25rem;}
 
 .shop-section .shop-preview-box{width:65%; display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem;}
 .shop-section .shop-preview-box .shop-pre-item{width: 33.33%;}
@@ -50,6 +50,7 @@ section{padding: 5rem 0;}
 .shop-section .shop-preview-box .shop-pre-item .num-box{display: flex; column-gap: 1rem; margin: 1rem 0;}
 .shop-section .shop-preview-box .shop-pre-item .brand-name{display: block; font-size: 1.75rem; margin-bottom: 1.5rem; color: #222;}
 .shop-section .shop-preview-box .shop-pre-item .brand-desc{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; overflow: hidden; padding-right: 2.5rem;}
+
 /* Video Section Style */
 .video-section{width: 100%; height: 70vh; position: relative; display: flex; align-items: center;}
 .video-section video{width: 100%; height: 100%; object-fit: cover; position: absolute;}
@@ -78,9 +79,31 @@ section{padding: 5rem 0;}
 
 /* Subscribe Section Style */
 .subscribe-section{color: #222;}
-.subscribe-section .subscribe-container{display: flex;}
+.subscribe-section .subscribe-container{display: flex; justify-content: space-between;}
 .subscribe-section .date-box{font-size: 4rem;}
-.subscribe-section .subscribe-content-box{display: flex; width: 50%;}
-.subscribe-section .subscribe-content-box > div { width: 50%;}
-.subscribe-section .subscribe-content-box .content-item{color: #222;}
-.subscribe-section .subscribe-content-box .content-item h3{font-size: 1.75rem;}
+
+.subscribe-section .subscribe-content-box{display: flex; width: 50%; height: 100vh; margin-top: 12rem; position: relative;}
+.subscribe-section .subscribe-content-box .subs-content{width: calc(50% - 1rem); display: flex; flex-direction: column; row-gap: 1.5rem; position: absolute;}
+.subscribe-section .subscribe-content-box .content-left{bottom:0;}
+.subscribe-section .subscribe-content-box .content-right{right: 0; bottom:0}
+.subscribe-section .subscribe-content-box .content-item{color: #222; padding: 2.5rem; transition: all .4s ease;}
+.subscribe-section .subscribe-content-box .content-item:hover{background: rgb(242, 242, 242);}
+.subscribe-section .subscribe-content-box .content-item > span::before{content: ''; display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 50%; background: #222; margin-right: .5rem;}
+.subscribe-section .subscribe-content-box .content-item > span::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1rem 1rem; background-repeat: no-repeat; width: 1rem; height: 1.25rem; vertical-align: middle; margin-left: .25rem;}
+.subscribe-section .subscribe-content-box .content-item h3{font-size: 1.75rem; font-weight: normal; margin: .25rem 0 1rem; line-height: 1.2;}
+.subscribe-section .subscribe-content-box .content-item .newsletter{font-size: 2.5rem;}
+
+/* Footer Section Style */
+#footer .footer-container{margin: 5rem 0; display: flex; flex-wrap: wrap; justify-content: space-between;}
+#footer .footer-container .footer-logo{width: 7.5rem;}
+#footer .footer-container img{width: 100%;}
+#footer .footer-container .footer-txt{display: flex; column-gap: 10rem; margin-right: 10rem;}
+#footer .footer-container .footer-txt > div{display: flex; flex-direction: column;}
+#footer .footer-container .footer-txt > div p{color: #222; font-size: 1rem; opacity: 0.25; margin-bottom: .25rem;}
+#footer .footer-container .footer-txt > div a{color: #222; font-size: 1.75rem;}
+#footer .footer-container .footer-txt .sns a::after,
+#footer .footer-container .footer-txt .follow a::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1.5rem 1.5rem; background-repeat: no-repeat; width: 1.5rem; height: 1.5rem; vertical-align: middle; margin-left: .25rem;}
+
+#footer .footer-container .byline{width: 100%; margin-top: 5rem; display: flex; flex-wrap: wrap; column-gap: 1rem; color: #222; opacity: 0.25; font-size: 1rem;}
+#footer .footer-container .byline a{color: #222; text-decoration: underline; font-size: 1rem;}
+#footer .footer-container .byline span:first-child{margin-right: 1.5rem;}
