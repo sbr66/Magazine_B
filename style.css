@@ -32,7 +32,10 @@ section{padding: 5rem 0;}
 .main-section .main-txt h1{font-size: 4rem; font-weight: normal;}
 .main-section .main-txt h3{font-size: 1rem; font-weight: normal;}
 .main-section .main-txt .main-btn a{border-bottom: 1px solid #fff; color: #fff; opacity: 0.6; padding-bottom: .5rem; font-size: 1rem;}
-.main-section .page-box{display: flex; justify-content: space-between; font-size: 5.5rem; padding: 0 5rem; color: #fff; position: relative; top: 15rem;}
+/* .main-section .page-box{display: flex; justify-content: space-between; font-size: 5.5rem; padding: 0 5rem; color: #fff; position: relative; top: 15rem;} */
+.main-section .page{position: absolute; font-size: 5.5rem; font-weight: bold; color: #fff;}
+.main-section .page-left{left: 5rem; bottom:5rem}
+.main-section .page-right{right: 5rem; bottom: 5rem;}
 
 /* Shop Section Style */
 .shop-section{width: 100%; height: auto; background: rgb(152, 192, 196); color: #222; position: relative;}
@@ -40,11 +43,12 @@ section{padding: 5rem 0;}
 .shop-section .container .shop-btn{position: absolute; bottom: 7.5rem; right: 5rem;}
 .shop-section .container .shop-btn a{display: flex; column-gap: 1.5rem;  font-size: 6rem; color: #fff; opacity: 0.5;}
 
-.shop-section .shop-contents .shop-title{display: flex; column-gap: .5rem;}
-.shop-section .shop-contents .shop-title h2{font-size: 3.5rem; cursor: pointer;}
+.shop-section .shop-contents{width: 65%;}
+.shop-section .shop-contents .shop-title{display: flex; flex-wrap: wrap; column-gap: .7rem;}
+.shop-section .shop-contents .shop-title h2{font-size: 4rem; cursor: pointer;}
 .shop-section .shop-contents .shop-title h2.active::after{content: ''; display: block; width: 95%; height: .3rem; background: #222; margin-top: .25rem;}
 
-.shop-section .shop-preview-box{width:65%; display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem;}
+.shop-section .shop-preview-box{display: flex; column-gap: 2.5rem; margin-top: 5rem; margin-bottom: 15rem;}
 .shop-section .shop-preview-box .shop-pre-item{width: 33.33%;}
 .shop-section .shop-preview-box .shop-pre-item img{width: 100%;}
 .shop-section .shop-preview-box .shop-pre-item .num-box{display: flex; column-gap: 1rem; margin: 1rem 0;}
@@ -68,6 +72,7 @@ section{padding: 5rem 0;}
 .books-section .books-container > p{opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
 .books-section .books-title-box{display: flex; column-gap: 0.5rem;}
 .books-section .books-title-box h2{font-size: 3.5rem; cursor: pointer;}
+.books-section .books-title-box h2.active::after{content: ''; display: block; width: 95%; height: .3rem; background: #222; margin-top: .25rem;}
 .books-section .books-preview-box{display: flex; width: 65%; column-gap: 2.5rem; margin: 5rem 0 15rem 0;}
 .books-section .books-preview-box .books-pre-item{width: 33.33%; display: flex; flex-direction: column; row-gap: 1rem;}
 .books-section .books-pre-item a{width: 100%;}
@@ -88,22 +93,23 @@ section{padding: 5rem 0;}
 .subscribe-section .subscribe-content-box .content-right{right: 0; bottom:0}
 .subscribe-section .subscribe-content-box .content-item{color: #222; padding: 2.5rem; transition: all .4s ease;}
 .subscribe-section .subscribe-content-box .content-item:hover{background: rgb(242, 242, 242);}
+.subscribe-section .subscribe-content-box .content-item > span{display: flex; align-items: center;}
 .subscribe-section .subscribe-content-box .content-item > span::before{content: ''; display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 50%; background: #222; margin-right: .5rem;}
-.subscribe-section .subscribe-content-box .content-item > span::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1rem 1rem; background-repeat: no-repeat; width: 1rem; height: 1.25rem; vertical-align: middle; margin-left: .25rem;}
+.subscribe-section .subscribe-content-box .content-item > span::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1rem 1rem; background-repeat: no-repeat; width: 1rem; height: 1.25rem; margin-left: .25rem;}
 .subscribe-section .subscribe-content-box .content-item h3{font-size: 1.75rem; font-weight: normal; margin: .25rem 0 1rem; line-height: 1.2;}
 .subscribe-section .subscribe-content-box .content-item .newsletter{font-size: 2.5rem;}
 
 /* Footer Section Style */
 #footer .footer-container{margin: 5rem 0; display: flex; flex-wrap: wrap; justify-content: space-between;}
-#footer .footer-container .footer-logo{width: 7.5rem;}
-#footer .footer-container img{width: 100%;}
-#footer .footer-container .footer-txt{display: flex; column-gap: 10rem; margin-right: 10rem;}
+#footer .footer-container .footer-logo{width: 25%;}
+#footer .footer-container img{width: 8rem;}
+#footer .footer-container .footer-txt{width: 75%; display: flex; column-gap: 6rem;}
 #footer .footer-container .footer-txt > div{display: flex; flex-direction: column;}
 #footer .footer-container .footer-txt > div p{color: #222; font-size: 1rem; opacity: 0.25; margin-bottom: .25rem;}
-#footer .footer-container .footer-txt > div a{color: #222; font-size: 1.75rem;}
+#footer .footer-container .footer-txt > div a{color: #222; font-size: 1.75rem; display: flex; flex-wrap: nowrap; align-items: center;}
 #footer .footer-container .footer-txt .sns a::after,
-#footer .footer-container .footer-txt .follow a::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1.5rem 1.5rem; background-repeat: no-repeat; width: 1.5rem; height: 1.5rem; vertical-align: middle; margin-left: .25rem;}
+#footer .footer-container .footer-txt .follow a::after{content: ''; background-image: url(images/asset11.png); display: inline-block; background-size: 1.5rem 1.5rem; background-repeat: no-repeat; width: 1.5rem; height: 1.5rem; margin-left: .25rem;}
 
-#footer .footer-container .byline{width: 100%; margin-top: 5rem; display: flex; flex-wrap: wrap; column-gap: 1rem; color: #222; opacity: 0.25; font-size: 1rem;}
+#footer .footer-container .byline{width: 100%; margin-top: 5rem; display: flex; flex-wrap: wrap; column-gap: 1rem; color: #222; opacity: 0.25; font-size: 1rem; align-items: center;}
 #footer .footer-container .byline a{color: #222; text-decoration: underline; font-size: 1rem;}
 #footer .footer-container .byline span:first-child{margin-right: 1.5rem;}
