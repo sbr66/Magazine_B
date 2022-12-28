@@ -5,6 +5,8 @@ const bookContents = document.querySelectorAll(".books-preview-box");
 const shopSection = document.querySelector(".shop-section");
 const bookSection = document.querySelector(".books-section");
 
+const dateBox = document.querySelector(".date-box");
+
 // Shop Section Tap
 shopTitles.forEach((title, idx) => {
   title.addEventListener("click", () => {
@@ -61,3 +63,54 @@ bookTitles.forEach((title, idx) => {
     } // 배경색 변경
   });
 });
+
+// Newsletter Section 현재 날짜 입력
+const day = () => {
+  let now = new Date();
+  const week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let dayOfWeek = week[now.getDay()];
+
+  return dayOfWeek + ",";
+};
+
+const year = () => {
+  let now = new Date();
+  let todayYear = now.getFullYear();
+  return todayYear;
+};
+
+const month = () => {
+  let now = new Date();
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let todayMonth = months[now.getMonth()];
+  return todayMonth;
+};
+
+const date = () => {
+  let now = new Date();
+  let todayDate = now.getDate();
+  return todayDate;
+};
+
+dateBox.innerHTML = `${day()} <br> ${date()} ${month()} <br> ${year()}`;

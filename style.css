@@ -91,7 +91,7 @@ section{padding: 5rem 0;}
 /* Subscribe Section Style */
 .subscribe-section{color: #222;}
 .subscribe-section .subscribe-container{display: flex; justify-content: space-between;}
-.subscribe-section .date-box{font-size: 4rem;}
+.subscribe-section .date-box{font-size: 4rem; letter-spacing: -1px;}
 
 .subscribe-section .subscribe-content-box{display: flex; width: 50%; height: 100vh; margin-top: 12rem; position: relative;}
 .subscribe-section .subscribe-content-box .subs-content{width: calc(50% - 1rem); display: flex; flex-direction: column; row-gap: 1.5rem; position: absolute;}
