@@ -1,3 +1,5 @@
+const mains = document.querySelectorAll(".main-wrapper");
+
 const shopTitles = document.querySelectorAll(".shop-title h2");
 const shopContents = document.querySelectorAll(".shop-preview-box");
 const bookTitles = document.querySelectorAll(".books-title-box h2");
@@ -6,6 +8,21 @@ const shopSection = document.querySelector(".shop-section");
 const bookSection = document.querySelector(".books-section");
 
 const dateBox = document.querySelector(".date-box");
+
+// Main Section
+function showImage() {
+  let idx = 0;
+  mains.forEach((main) => {
+    main.classList.remove("active");
+  });
+  idx++;
+  mains[idx].classList.add("active");
+  if (idx > mains.length) {
+    idx = 0;
+  }
+}
+
+setInterval(showImage, 2000);
 
 // Shop Section Tap
 shopTitles.forEach((title, idx) => {
@@ -65,7 +82,7 @@ bookTitles.forEach((title, idx) => {
 });
 
 // Newsletter Section 현재 날짜 입력
-const day = () => {
+const today = () => {
   let now = new Date();
   const week = [
     "Sunday",
@@ -77,18 +94,7 @@ const day = () => {
     "Saturday",
   ];
   let dayOfWeek = week[now.getDay()];
-
-  return dayOfWeek + ",";
-};
-
-const year = () => {
-  let now = new Date();
   let todayYear = now.getFullYear();
-  return todayYear;
-};
-
-const month = () => {
-  let now = new Date();
   const months = [
     "Jan",
     "Feb",
@@ -104,13 +110,10 @@ const month = () => {
     "Dec",
   ];
   let todayMonth = months[now.getMonth()];
-  return todayMonth;
-};
-
-const date = () => {
-  let now = new Date();
   let todayDate = now.getDate();
-  return todayDate;
+  return (
+    dayOfWeek + ",<br>" + todayDate + " " + todayMonth + "<br>" + todayYear
+  );
 };
 
-dateBox.innerHTML = `${day()} <br> ${date()} ${month()} <br> ${year()}`;
+dateBox.innerHTML = today();
