@@ -1,4 +1,5 @@
 const mains = document.querySelectorAll(".main-wrapper");
+const scroll = document.querySelector(".scroll");
 
 const shopTitles = document.querySelectorAll(".shop-title h2");
 const shopContents = document.querySelectorAll(".shop-preview-box");
@@ -10,19 +11,40 @@ const bookSection = document.querySelector(".books-section");
 const dateBox = document.querySelector(".date-box");
 
 // Main Section
-function showImage() {
-  let idx = 0;
-  mains.forEach((main) => {
-    main.classList.remove("active");
-  });
-  idx++;
-  mains[idx].classList.add("active");
-  if (idx > mains.length) {
-    idx = 0;
-  }
-}
+// function changeMain() {
+//   let idx = 0;
+//   mains.forEach((main) => {
+//     main.classList.remove("active");
+//   });
+//   idx++;
+//   mains[idx].classList.add("active");
+//   if (idx > mains.length) {
+//     idx = 0;
+//   }
+// }
+// setInterval(changeMain, 2000);
 
-setInterval(showImage, 2000);
+// https://codepen.io/shuho/pen/gZrxrw
+
+let currentIndex = 0;
+let time = 3000; // default time for auto slideshow
+
+const defClass = (startPos, index) => {
+  for (let i = startPos; i < mains.length; i++) {
+    mains[i].classList.remove("active");
+  }
+  mains[index].classList.add("active");
+};
+
+defClass(1, 0);
+
+const changeMain = () => {
+  setInterval(() => {
+    currentIndex >= mains.length - 1 ? (currentIndex = 0) : currentIndex++;
+    defClass(0, currentIndex);
+  }, time);
+};
+changeMain();
 
 // Shop Section Tap
 shopTitles.forEach((title, idx) => {
