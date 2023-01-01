@@ -43,14 +43,10 @@ const defClass = (startPos, index) => {
 
 defClass(1, 0);
 
-const changeMain = () => {
-  setInterval(() => {
-    currentIndex >= mains.length - 1 ? (currentIndex = 0) : currentIndex++;
-    defClass(0, currentIndex);
-  }, time);
-};
-
-changeMain();
+const changeMain = setInterval(() => {
+  currentIndex >= mains.length - 1 ? (currentIndex = 0) : currentIndex++;
+  defClass(0, currentIndex);
+}, time);
 
 setTimeout(() => {
   clearInterval(changeMain);
