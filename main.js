@@ -26,14 +26,19 @@ const dateBox = document.querySelector(".date-box");
 
 // https://codepen.io/shuho/pen/gZrxrw
 
+// Main Section 페이지 자동 변경
 let currentIndex = 0;
-let time = 3000; // default time for auto slideshow
+let time = 2000; // default time for auto slideshow
+const mainScroll = document.querySelector(".scroll");
+const page = document.querySelector(".page-left");
 
 const defClass = (startPos, index) => {
   for (let i = startPos; i < mains.length; i++) {
     mains[i].classList.remove("active");
   }
   mains[index].classList.add("active");
+  mainScroll.style.transform = `translateX(${index * 100}%)`;
+  page.innerHTML = `${index + 1}`;
 };
 
 defClass(1, 0);
@@ -44,7 +49,32 @@ const changeMain = () => {
     defClass(0, currentIndex);
   }, time);
 };
+
 changeMain();
+
+setTimeout(() => {
+  clearInterval(changeMain);
+}, 7000);
+
+// Main Section 클릭시 페이지 변경
+const beforeBtn = document.querySelectorAll(".before-page");
+const nextBtn = document.querySelectorAll(".next-page");
+
+beforeBtn.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    currentIndex <= 0 ? (currentIndex = 0) : currentIndex--;
+    defClass(0, currentIndex);
+  });
+});
+
+nextBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    currentIndex >= mains.length - 1
+      ? (currentIndex = mains.length - 1)
+      : currentIndex++;
+    defClass(0, currentIndex);
+  });
+});
 
 // Shop Section Tap
 shopTitles.forEach((title, idx) => {
