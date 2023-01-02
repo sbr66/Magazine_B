@@ -7,12 +7,13 @@ body {font-family: "Beausite Classic Regular", "Noto Sans KR";}
 ol,ul {list-style: none;}
 a{text-decoration: none;}
 
+.wrapper{width:100%; height:auto; overflow:hidden;}
 .container{width: 100%; padding: 0 5rem; }
 section{padding: 5rem 0;}
 
 /* Header style */
 #header{width: 100%; padding: 1.25rem 0; backdrop-filter: blur(50px) brightness(95%); position:fixed; z-index:20;}
-#header > .container {display: flex; justify-content: space-between; font-size: 1.25rem;}
+#header > .container {width: 100%; height: auto; display: flex; justify-content: space-between; font-size: 1.25rem;}
 #header .left {display: flex;}
 #header .left .logo a {display: flex; height: 1.5rem; _width: 1.25rem; margin-right: 2.5rem;}
 #header .left .logo img {height: 100%;}
@@ -21,6 +22,7 @@ section{padding: 5rem 0;}
 
 #header .right-list {display: flex; column-gap: 1.5rem; align-items: center; color: #fff; cursor: pointer;}
 #header .right-list a {color: #fff;}
+#header .right-list .cart {display: flex;}
 #header .right-list .language {display: flex; column-gap: 1px;}
 #header .right-list .language img {width: 1.25rem; object-fit: scale-down;}
 
@@ -33,6 +35,7 @@ section{padding: 5rem 0;}
     from {opacity: 0.7;}
     to {opacity: 1;}
 }
+/* https://ktsmemo.cafe24.com/s/SwiperJS/357 */
 
 .main-section .main-wrapper img{width: 100%; height: 100%; object-fit: cover; position: absolute;}
 
@@ -135,3 +138,9 @@ section{padding: 5rem 0;}
 #footer .footer-container .byline{width: 100%; margin-top: 5rem; display: flex; flex-wrap: wrap; column-gap: 1rem; color: #222; opacity: 0.25; font-size: 1rem; align-items: center;}
 #footer .footer-container .byline a{color: #222; text-decoration: underline; font-size: 1rem;}
 #footer .footer-container .byline span:first-child{margin-right: 1.5rem;}
+
+@media screen and (max-width:1199px) {
+    /* Header Style */
+    #header .left .left-list {display: none;}
+    #header .right-list li:not(.cart){display: none;} 
+}
