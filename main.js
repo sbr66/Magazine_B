@@ -14,8 +14,19 @@ const dateBox = document.querySelector(".date-box");
 const mobileMenus = document.querySelector(".mobile-menus");
 const headerLeft = document.querySelector(".left").cloneNode(true);
 const headerRight = document.querySelector(".right-list").cloneNode(true);
+const Header = document.querySelector("#header .container");
+const menu = document.querySelector("#header");
+mobileMenus.appendChild(headerLeft);
+mobileMenus.appendChild(headerRight);
 
 const menuBtn = document.querySelector(".menu-btn");
+menuBtn.addEventListener("click", () => {
+  mobileMenus.style.display = "block";
+  //Header.style.display = "none";
+  menu.style.height = "100vh";
+  menu.style.background = "#222";
+});
+
 // Main Section
 // function changeMain() {
 //   let idx = 0;
