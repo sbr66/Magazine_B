@@ -1,0 +1,42 @@
+
+@media screen and (max-width:1199px) {
+    html{font-size: 14px;}
+    .container{padding: 0 3rem;}
+    /* Header Style */
+    #header{padding: 1rem 0;}
+    #header > .container{_font-size: 1rem;}
+    #header .left .logo{height: 1.3rem;}
+    #header .left .left-list {display: none;}
+    #header .right-list{column-gap: 1rem;}
+    #header .right-list li:not(.cart, .menu-btn){display: none;}
+    #header .right-list .menu-btn{display: block;}
+    
+    
+    /* Main Section */
+    .main-section .page-left{left: 3rem; bottom: 2.5rem;}
+    .main-section .page-right{right: 3rem; bottom: 2.5rem;}
+
+    /* Shop Section */
+    .shop-section .container .shop-btn {right: 3rem; align-items: center;}
+    .shop-section .shop-contents{width: 85%; padding-bottom: 5rem;}
+
+    /* Video Section */
+    .video-section{height: 55vh;}
+
+    /* Book Section Style */
+    .books-section .books-preview-box{width: 85%; padding-bottom: 5rem;}
+
+    /* Subscribe Section */
+    .subscribe-section .subscribe-content-box{width: 65%;}
+    .subscribe-section .subscribe-content-box .content-item{padding: 1.5rem;}
+
+    /* Footer Section */
+    #footer .footer-container .footer-logo{width: 20%;}
+    #footer .footer-container .footer-txt{width: 80%;}
+
+    #footer .footer-container img{width: 6rem;}
+}
+
+@media screen and(max-width: 991px){
+    
+}
