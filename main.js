@@ -173,3 +173,10 @@ const today = () => {
 };
 
 dateBox.innerHTML = today();
+
+// Footer byline toggle
+const companyBtn = document.querySelector(".company-btn");
+console.log(companyBtn);
+companyBtn.addEventListener("click", () => {
+  document.querySelector(".footer-container").classList.toggle("active");
+});

@@ -58,10 +58,18 @@
 
     /* Footer Secton */
     #footer{position: relative;}
+    #footer .footer-container{margin: 3rem 0 1.5rem 0;}
     #footer .footer-container .footer-logo{width: fit-content; position: absolute; right: 1.5rem; bottom: 1.5rem;}
     #footer .footer-container img{width: 3rem;}
     #footer .footer-container .footer-txt{width: 90%;}
     #footer .footer-container .footer-txt > div a{font-size: 1.5rem;}
     #footer .footer-container .byline .company{display: flex; column-gap: 0.5rem;}
-    #footer .footer-container .byline .company::after{content: ''; display: block; background-image: url(images/asset13.png); background-size: 1.5rem 1.5rem; width: 1.5rem; height: 1.5rem; background-repeat: no-repeat;}
+    #footer .footer-container .byline .company-btn{display: block; width: 1.2rem;}
+    #footer .footer-container .byline > *:not(.company){display: none;}
+
+    #footer .footer-container.active{border: 1px solid rgba(34, 34, 34, .1); padding: 1.5rem; margin-bottom: 0;} 
+    #footer .footer-container.active > *:not(.byline){display: none;}
+    #footer .footer-container.active .company img{transform: rotate(180deg);}
+    #footer .footer-container.active .toggle-byline{display: flex;}
+    #footer .footer-container.active .byline{margin-top: 2rem;}
 }
