@@ -2,7 +2,7 @@
 @media screen and (max-width:1199px) {
     html{font-size: 14px;}
     .container{padding: 0 3rem;}
-    /* Header Style */
+    /* Header Section Style */
     #header{padding: 1rem 0;}
     #header .left .left-list {display: none;}
     #header .right-list{column-gap: 1rem;}
@@ -10,26 +10,26 @@
     #header .right-list .menu-btn{display: block;}
     
     
-    /* Main Section */
+    /* Main Section Style*/
     .main-section .page-left{left: 3rem; bottom: 2.5rem;}
     .main-section .page-right{right: 3rem; bottom: 2.5rem;}
 
-    /* Shop Section */
-    .shop-section .container .shop-btn {right: 3rem; align-items: center;}
+    /* Shop Section Style*/
     .shop-section .shop-contents{width: 85%; padding-bottom: 5rem;}
+    .shop-section .container .shop-btn {right: 3rem; align-items: center;}
 
-    /* Video Section */
+    /* Video Section Style*/
     .video-section{height: 55vh;}
 
     /* Book Section Style */
-    .books-section .books-preview-box{width: 85%; padding-bottom: 5rem;}
+    .books-section .books-container .books-contents{width: 85%; padding-bottom: 5rem;}
     .books-section .books-btn{right: 3rem;}
 
-    /* Subscribe Section */
+    /* Subscribe Section Style*/
     .subscribe-section .subscribe-content-box{width: 65%;}
     .subscribe-section .subscribe-content-box .content-item{padding: 1.5rem;}
 
-    /* Footer Section */
+    /* Footer Section Style*/
     #footer .footer-container .footer-logo{width: 20%;}
     #footer .footer-container .footer-txt{width: 80%;}
 
@@ -37,26 +37,28 @@
 }
 
 @media screen and (max-width: 991px){
+    section{padding: 2rem 0;}
     .container{padding: 0 1.5rem;}
 
-    /* Main Section */
+    /* Main Section Style*/
     .main-section .page-left{left: 1.5rem;}
     .main-section .page-right{right: 1.5rem;}
 
-    /* Shop Section */
+    /* Shop Section Style */
     .shop-section .shop-preview-box.active{flex-wrap: wrap; row-gap: 3rem;}
     .shop-section .shop-preview-box .shop-pre-item{width: 36%;}
-    .shop-section .container .shop-btn {right: 1.5rem; align-items: center;}
+    .shop-section .container .shop-btn {right: 1.5rem; bottom: 2.5rem;}
 
-    /* Books Section */
+    /* Books Section Style*/
     .books-section .books-preview-box.active{flex-wrap: wrap; row-gap: 3rem;}
     .books-section .books-preview-box .books-pre-item{width: 36%;}
-
-    /* Subscribe Section */
+    .books-section .books-btn{right: 1.5rem; bottom: 2.5rem;}
+    
+    /* Subscribe Section Style*/
     .subscribe-section .subscribe-container{justify-content: flex-start;}
-    .subscribe-section .subscribe-content-box{width: 70%; margin: 4rem 0 0 1rem;}
+    .subscribe-section .subscribe-content-box{width: 70%; margin: 4rem 0 8rem 1rem;}
 
-    /* Footer Secton */
+    /* Footer Section Style*/
     #footer{position: relative;}
     #footer .footer-container{margin: 3rem 0 1.5rem 0;}
     #footer .footer-container .footer-logo{width: fit-content; position: absolute; right: 1.5rem; bottom: 1.5rem;}
@@ -72,4 +74,32 @@
     #footer .footer-container.active .company img{transform: rotate(180deg);}
     #footer .footer-container.active .toggle-byline{display: flex;}
     #footer .footer-container.active .byline{margin-top: 2rem;}
+}
+
+@media screen and (max-width: 767px) {
+    /* Header Section Style */
+    #header .left .logo{height: 1.75rem;}
+    #header .right-list{column-gap: 1.25rem;}
+
+    /* Main Section Style */
+    .main-section .main-wrapper.active{justify-content: flex-end;}
+    .main-section .main-txt{padding-bottom: 2.5rem; row-gap: .5rem;}
+    .main-section .main-txt h1{font-size: 3rem;}
+    .main-section .main-txt h3{display: none;}
+    .main-section .page{bottom:calc(50% - 1.5rem); font-size: 3rem;}
+
+    /* Shop Section Style */
+    .shop-section .shop-contents .shop-title h2{font-size: 2.5rem; letter-spacing: 0.5px;}
+    .shop-section .shop-contents .shop-title h2:not(.active){display: none;}
+    .shop-section .shop-contents .shop-title h2.active::after{display:none;}
+
+    _.shop-section .shop-preview-box{display: flex;}
+
+    /* Video Section Style */
+    .video-section{height: 100vh;}
+    .video-section .video-container{position: absolute; bottom: 2.5rem;}
+    .video-section .video-container .video-txt-box h1{font-size: 3rem;}
+    .video-section .video-container .video-txt-box h3{display: none;}
+    .video-section .video-icon{width: 1.75rem;}
+
 }
