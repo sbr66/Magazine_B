@@ -111,9 +111,25 @@ shopTitles.forEach((title, idx) => {
 });
 
 // ~767px Shop Section
-const shopContainer = document.querySelector(".shop-container").cloneNode();
-const shopContentsClone = document.querySelector(".shop-contents").cloneNode();
-// shopSection.append(shopContainer).append(shopContentsClone);
+
+// const shopContainer = document.querySelector(".shop-container").cloneNode();
+// const shopContentsClone = document.querySelector(".shop-contents").cloneNode();
+// shopContainer.appendChild(shopContentsClone);
+// shopSection.appendChild(shopContainer);
+
+for (let i = 0; i < 3; i++) {
+  const container = document.querySelector(".shop-container").cloneNode();
+  const shopContentsClone = document
+    .querySelector(".shop-contents")
+    .cloneNode();
+  container.appendChild(shopContentsClone);
+  shopSection.appendChild(container);
+}
+
+const shopContainer = document.querySelectorAll(".shop-container");
+const shopTitle = document.querySelectorAll(".shop-title > h2");
+const shopPreviewBox = document.querySelectorAll(".shop-preview-box");
+console.log(shopContainer);
 
 // Books Section Tap
 bookTitles.forEach((title, idx) => {
