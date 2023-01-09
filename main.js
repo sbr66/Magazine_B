@@ -110,6 +110,11 @@ shopTitles.forEach((title, idx) => {
   });
 });
 
+// ~767px Shop Section
+const shopContainer = document.querySelector(".shop-container").cloneNode();
+const shopContentsClone = document.querySelector(".shop-contents").cloneNode();
+// shopSection.append(shopContainer).append(shopContentsClone);
+
 // Books Section Tap
 bookTitles.forEach((title, idx) => {
   title.addEventListener("click", () => {
@@ -176,7 +181,7 @@ dateBox.innerHTML = today();
 
 // Footer byline toggle
 const companyBtn = document.querySelector(".company-btn");
-console.log(companyBtn);
+// console.log(companyBtn);
 companyBtn.addEventListener("click", () => {
   document.querySelector(".footer-container").classList.toggle("active");
 });
