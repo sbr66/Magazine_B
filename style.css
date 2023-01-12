@@ -74,14 +74,14 @@ section{padding: 5rem 0;}
 
 /* Shop Section Style */
 .shop-section{width: 100%; height: auto; background: rgb(152, 192, 196); color: #222; position: relative;}
-.shop-section .container > p{opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
+.shop-section .container .shop-title p{width:100%; opacity: 0.3; font-size: 1.75rem; margin-bottom: 3rem;}
 .shop-section .container .shop-btn{display: flex; column-gap: 1.5rem;  font-size: 6rem; color: #fff; opacity: 0.5; position: absolute; bottom: 7.5rem; right: 5rem; align-items: baseline;}
 
 .shop-section .shop-contents{width: 65%;}
-.shop-section .shop-contents .shop-title{display: flex; flex-wrap: wrap; column-gap: .7rem;}
-.shop-section .shop-contents .shop-title h2{font-size: 4rem; letter-spacing: 2px; cursor: pointer;}
-.shop-section .shop-contents .shop-title h2::after{content: ''; display: block; width: 95%; height: .3rem; background: transparent; margin-top: .25rem; transition: all .5s ease;}
-.shop-section .shop-contents .shop-title h2.active::after{background: #222;}
+.shop-section .shop-title{display: flex; flex-wrap: wrap; column-gap: .7rem;}
+.shop-section .shop-title h2{font-size: 4rem; letter-spacing: 2px; cursor: pointer;}
+.shop-section .shop-title h2::after{content: ''; display: block; width: 95%; height: .3rem; background: transparent; margin-top: .25rem; transition: all .5s ease;}
+.shop-section .shop-title h2.active::after{background: #222;}
 
 .shop-section .shop-preview-box{display: none; column-gap: 2.5rem; margin: 3.5rem 0 15rem 0;}
 .shop-section .shop-preview-box.active{display: flex; animation: show .7s 1;}

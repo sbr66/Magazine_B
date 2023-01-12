@@ -89,11 +89,11 @@
     .main-section .page{bottom:calc(50% - 1.5rem); font-size: 3rem;}
 
     /* Shop Section Style */
-    .shop-section .container > p {margin-bottom: .5rem;}
+    .shop-section .container .shop-title p {margin-bottom: .5rem;}
     .shop-section .shop-contents{width: 100%;}
-    .shop-section .shop-contents .shop-title h2{font-size: 2.5rem; letter-spacing: 0.5px;}
-    _.shop-section .shop-contents .shop-title h2:not(.active){display: none;}
-    .shop-section .shop-contents .shop-title h2.active::after{display:none;}
+    .shop-section .shop-title h2{font-size: 2.5rem; letter-spacing: 0.5px;}
+    _.shop-section .shop-title h2:not(.active){display: none;}
+    .shop-section .shop-title h2.active::after{display:none;}
     .shop-section .shop-preview-box{margin-top:1.5rem; width: 100%; display: block;}
     .shop-section .shop-preview-box .shop-pre-item:last-child{display: none;}
     .shop-section .shop-preview-box .shop-pre-item{width: 100%;}
