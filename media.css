@@ -15,7 +15,7 @@
     .main-section .page-right{right: 3rem; bottom: 2.5rem;}
 
     /* Shop Section Style*/
-    .shop-section .shop-contents{width: 90%; padding-bottom: 5rem;}
+    .shop-section .container .shop-contents{width: 90%; padding-bottom: 5rem;}
     .shop-section .container .shop-btn {right: 3rem; align-items: center;}
 
     /* Video Section Style*/
@@ -45,12 +45,12 @@
     .main-section .page-right{right: 1.5rem;}
 
     /* Shop Section Style */
-    .shop-section .shop-preview-box.active{flex-wrap: wrap; row-gap: 3rem;}
+    .shop-section .shop-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .shop-section .shop-preview-box .shop-pre-item{width: 36%;}
     .shop-section .container .shop-btn {right: 1.5rem; bottom: 2.5rem;}
 
     /* Books Section Style*/
-    .books-section .books-preview-box.active{flex-wrap: wrap; row-gap: 3rem;}
+    .books-section .books-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .books-section .books-preview-box .books-pre-item{width: 36%;}
     .books-section .books-btn{right: 1.5rem; bottom: 2.5rem;}
     
@@ -89,6 +89,9 @@
     .main-section .page{bottom:calc(50% - 1.5rem); font-size: 3rem;}
 
     /* Shop Section Style */
+    .shop-section .shop-title{display: none;}
+    .shop-section .container .shop-contents > p{display: block;  margin-bottom: 1rem;}
+    .shop-section .container .shop-contents a h2{display: block;}
     .shop-section .container .shop-title p {margin-bottom: .5rem;}
     .shop-section .shop-contents{width: 100%;}
     .shop-section .shop-title h2{font-size: 2.5rem; letter-spacing: 0.5px;}
