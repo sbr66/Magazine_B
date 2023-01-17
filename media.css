@@ -15,15 +15,14 @@
     .main-section .page-right{right: 3rem; bottom: 2.5rem;}
 
     /* Shop Section Style*/
-    .shop-section .container .shop-contents{width: 90%; padding-bottom: 5rem;}
-    .shop-section .container .shop-btn {right: 3rem; align-items: center;}
+    .shop-section .container .shop-contents{width: 90%;}
+    .shop-section .container .shop-btn {align-items: center;}
 
     /* Video Section Style*/
     .video-section{height: 55vh;}
 
     /* Book Section Style */
-    .books-section .books-container .books-contents{width: 90%; padding-bottom: 5rem;}
-    .books-section .books-btn{right: 3rem;}
+    .books-section .books-container .books-contents{width: 90%;}
 
     /* Subscribe Section Style*/
     .subscribe-section .subscribe-content-box{width: 65%;}
@@ -47,12 +46,10 @@
     /* Shop Section Style */
     .shop-section .shop-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .shop-section .shop-preview-box .shop-pre-item{width: 36%;}
-    .shop-section .container .shop-btn {right: 1.5rem; bottom: 2.5rem;}
 
     /* Books Section Style*/
     .books-section .books-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .books-section .books-preview-box .books-pre-item{width: 36%;}
-    .books-section .books-btn{right: 1.5rem; bottom: 2.5rem;}
     
     /* Subscribe Section Style*/
     .subscribe-section .subscribe-container{justify-content: flex-start;}
@@ -83,7 +80,7 @@
 
     /* Main Section Style */
     .main-section .main-wrapper.active{justify-content: flex-end;}
-    .main-section .main-txt{padding-bottom: 2.5rem; row-gap: .5rem;}
+    .main-section .main-txt{padding-bottom: 2.5rem; row-gap: .5rem; position: absolute;}
     .main-section .main-txt h1{font-size: 3rem;}
     .main-section .main-txt h3{display: none;}
     .main-section .page-wrapper{position:absolute;}
