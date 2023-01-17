@@ -102,7 +102,7 @@ section{padding: 5rem 0;}
 .shop-section .shop-preview-box .shop-pre-item .brand-desc{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; overflow: hidden; padding-right: 2.5rem;}
 
 /* Video Section Style */
-.video-section{width: 100%; height: 70vh; position: relative; display: flex; align-items: center; overflow: hidden;}
+.video-section{width: 100%; height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden;}
 .video-section video{width: 100%; height: 110%; object-fit: cover; position: absolute;}
 .video-section .video-container{position: relative; z-index: 10;}
 .video-section .video-container .video-txt-box{color: #fff; display: flex; flex-direction: column; row-gap: 1.5rem;}
@@ -143,10 +143,8 @@ section{padding: 5rem 0;}
 .subscribe-section .subscribe-container{display: flex; flex-wrap: wrap; justify-content: flex-end;} 
 .subscribe-section .date-box{width: 100%; font-size: 4rem; letter-spacing: -1px; line-height: 1.2;}
 
-.subscribe-section .subscribe-content-box{display: flex; width: 50%; height: 70vh; position: relative;}
-.subscribe-section .subscribe-content-box .subs-content{width: calc(50% - 1rem); display: flex; flex-direction: column; row-gap: 1.5rem; position: absolute;}
-.subscribe-section .subscribe-content-box .content-left{bottom:0;}
-.subscribe-section .subscribe-content-box .content-right{right: 0; bottom:0}
+.subscribe-section .subscribe-content-box{display: flex; width: 50%; column-gap: 2rem;}
+.subscribe-section .subscribe-content-box .subs-content{width: calc(50% - 1rem); display: flex; flex-direction: column; row-gap: 1.5rem; justify-content: flex-end;}
 .subscribe-section .subscribe-content-box .content-item{color: #222; padding: 2.5rem; transition: all .4s ease;}
 .subscribe-section .subscribe-content-box .content-item:hover{background: rgb(242, 242, 242);}
 .subscribe-section .subscribe-content-box .content-item > span{display: flex; align-items: center;}
@@ -158,9 +156,9 @@ section{padding: 5rem 0;}
 /* Footer Section Style */
 #footer .footer-container{margin: 5rem 0; display: flex; flex-wrap: wrap; justify-content: space-between;}
 #footer .footer-container .footer-logo{width: 25%;}
-#footer .footer-container img{width: 8rem;}
-#footer .footer-container .footer-txt{width: 75%; display: flex; column-gap: 6rem;}
-#footer .footer-container .footer-txt > div{display: flex; flex-direction: column;}
+#footer .footer-container img{width: 6.5rem;}
+#footer .footer-container .footer-txt{width: 75%; display: flex;}
+#footer .footer-container .footer-txt > div{display: flex; flex-direction: column; width: 25%;}
 #footer .footer-container .footer-txt > div p{color: #222; font-size: 1rem; opacity: 0.25; margin-bottom: .25rem;}
 #footer .footer-container .footer-txt > div a{color: #222; font-size: 1.75rem; display: flex; flex-wrap: nowrap; align-items: center; width: fit-content;}
 #footer .footer-container .footer-txt .sns a::after,
@@ -169,6 +167,7 @@ section{padding: 5rem 0;}
 #footer .footer-container .toggle-byline{display: none; color: #999; flex-direction: column; row-gap: .25rem;}
 #footer .footer-container .toggle-byline a{color: #999; padding-bottom: .25rem; border-bottom: 1px solid #999; display: inline-block; margin: 1rem 0 1rem 0;}
 #footer .footer-container .byline{width: 100%; margin-top: 5rem; display: flex; flex-wrap: wrap; column-gap: 1rem; color: #222; opacity: 0.25; font-size: 1rem; align-items: center;}
-#footer .footer-container .byline a{color: #222; text-decoration: underline; font-size: 1rem;}
+#footer .footer-container .byline span{font-size: 1rem;}
+#footer .footer-container .byline a{color: #222; font-size: 1rem; border-bottom: 1px solid #777; padding-bottom: 1px;}
 #footer .footer-container .byline .company{margin-right: 1.5rem;}
 #footer .footer-container .byline .company-btn{display: none;}

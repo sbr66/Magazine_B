@@ -19,13 +19,13 @@
     .shop-section .container .shop-btn {align-items: center;}
 
     /* Video Section Style*/
-    .video-section{height: 55vh;}
+    .video-section{height: 75vh;}
 
     /* Book Section Style */
     .books-section .books-container .books-contents{width: 90%;}
 
     /* Subscribe Section Style*/
-    .subscribe-section .subscribe-content-box{width: 65%;}
+    .subscribe-section .subscribe-content-box{width: 65%; margin-top: 12rem;}
     .subscribe-section .subscribe-content-box .content-item{padding: 1.5rem;}
 
     /* Footer Section Style*/
@@ -47,6 +47,9 @@
     .shop-section .shop-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .shop-section .shop-preview-box .shop-pre-item{width: 36%;}
 
+    /* Video Section Style */
+    .video-section{height: 65vh;}
+
     /* Books Section Style*/
     .books-section .books-preview-box{flex-wrap: wrap; row-gap: 3rem;}
     .books-section .books-preview-box .books-pre-item{width: 36%;}
@@ -60,7 +63,7 @@
     #footer .footer-container{margin: 3rem 0 1.5rem 0;}
     #footer .footer-container .footer-logo{width: fit-content; position: absolute; right: 1.5rem; bottom: 1.5rem;}
     #footer .footer-container img{width: 3rem;}
-    #footer .footer-container .footer-txt{width: 90%;}
+    #footer .footer-container .footer-txt{width: 100%;}
     #footer .footer-container .footer-txt > div a{font-size: 1.5rem;}
     #footer .footer-container .byline .company{display: flex; column-gap: 0.5rem;}
     #footer .footer-container .byline .company-btn{display: block; width: 1.2rem;}
@@ -96,10 +99,7 @@
     .shop-section .shop-contents:nth-child(4){background: rgb(217, 228, 241);}
     .shop-section .container .shop-contents > p{display: block;  margin-bottom: 0.5rem;}
     .shop-section .container .shop-contents > a { display: flex;}
-    /* .shop-section .container .shop-title p {margin-bottom: .5rem;}
-    .shop-section .shop-title h2{font-size: 2.5rem; letter-spacing: 0.5px;}
-    _.shop-section .shop-title h2:not(.active){display: none;}
-    .shop-section .shop-title h2.active::after{display:none;} */
+
     .shop-section .shop-preview-box{width: 100%; display: flex; margin:2rem 0 0 0;  row-gap: 5rem;}
     .shop-section .shop-preview-box .shop-pre-item:last-child{display: none;}
     .shop-section .shop-preview-box .shop-pre-item{width: 100%;}
@@ -121,9 +121,7 @@
     .books-section .books-container .books-contents:nth-child(3){background: rgb(202, 219, 231);}
     .books-section .books-container .books-contents > p{display: block; margin-bottom: .5rem;}
     .books-section .books-container .books-contents > a {display: flex;}
-    /* .books-section .books-title-box h2{font-size: 2.5rem; letter-spacing: 0.5px;}
-    _.books-section .books-title-box h2:not(.active){display: none;}
-    .books-section .books-title-box h2.active::after{display:none;} */
+
     .books-section .books-preview-box{display: flex; margin: 2rem 0 0 0; row-gap: 5rem;}
     .books-section .books-preview-box .books-pre-item{width: 100%;}
     .books-section .books-preview-box .books-pre-item:nth-child(3){display: none;}
@@ -142,7 +140,7 @@
     /* Footer Section */
     #footer .footer-container .footer-logo{bottom: 0;}
     #footer .footer-container .footer-txt{flex-direction: column; row-gap: 2rem;}
-    #footer .footer-container .footer-txt > div{line-height: 1.2;}
+    #footer .footer-container .footer-txt > div{line-height: 1.2; width: 100%;}
     #footer .footer-container .footer-txt > div p{font-size: 1.2rem;}
     #footer .footer-container .footer-txt > div a{font-size: 1.7rem;}
     #footer .footer-container .byline{margin-top: 7rem;}
