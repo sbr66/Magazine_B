@@ -1,6 +1,23 @@
+@media screen and (max-width:1750px){
+    html{font-size: 15px;}
+}
+
+@media screen and (max-width:1440px){
+    html{font-size: 14px;}
+    
+    /* Shop Section Style*/
+    .shop-section .container .shop-contents{width: 75%;}
+
+    /* Video Section Style*/
+    .video-section{height: 65vh;}
+
+    /* Book Section Style */
+    .books-section .books-container .books-contents{width: 75%;}
+}
+
+
 
 @media screen and (max-width:1199px) {
-    html{font-size: 14px;}
     .container{padding: 0 3rem;}
     /* Header Section Style */
     #header{padding: 1rem 0;}
@@ -19,7 +36,7 @@
     .shop-section .container .shop-btn {align-items: center;}
 
     /* Video Section Style*/
-    .video-section{height: 75vh;}
+    .video-section{height: 50vh;}
 
     /* Book Section Style */
     .books-section .books-container .books-contents{width: 90%;}
@@ -48,7 +65,7 @@
     .shop-section .shop-preview-box .shop-pre-item{width: 36%;}
 
     /* Video Section Style */
-    .video-section{height: 65vh;}
+    .video-section{height: 40vh;}
 
     /* Books Section Style*/
     .books-section .books-preview-box{flex-wrap: wrap; row-gap: 3rem;}
@@ -56,7 +73,7 @@
     
     /* Subscribe Section Style*/
     .subscribe-section .subscribe-container{justify-content: flex-start;}
-    .subscribe-section .subscribe-content-box{width: 70%; margin: 4rem 0 8rem 1rem;}
+    .subscribe-section .subscribe-content-box{width: 70%; margin: 0 0 8rem 1rem;}
 
     /* Footer Section Style*/
     #footer{position: relative;}

@@ -1,0 +1,27 @@
+@import url(//db.onlinewebfonts.com/c/81db551dd19e720ed0bc40dbde312130?family=Beausite+Classic+Regular);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
+
+html {scroll-behavior: smooth;}
+body {font-family: "Beausite Classic Regular", "Noto Sans KR";}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ol,ul {list-style: none;}
+a{text-decoration: none;}
+
+.wrapper{width:100%; height:auto; overflow:hidden;}
+.container{width: 100%; padding: 0 5rem; max-width: 2000px; margin: auto;}
+section{padding: 5rem 0; background: rgb(240, 227, 227);}
+
+.new-section .container{display: flex; flex-wrap: wrap;}
+.new-section .container .new-left{width: 50%; height: auto; padding-right: 10rem;}
+.new-section .container .new-left h3{font-size: 2rem; color: #222; font-weight: normal;}
+.new-section .container .new-left h2{font-size: 6rem; font-weight: normal; color: #222;}
+.new-section .container .new-left .new-title{font-size: 6rem; color: #222;}
+.new-section .container .new-left .desc{font-size: 1.25rem; color: #222; font-weight: 900;}
+.new-section .container .new-left .new-btn{color: #fff; background: #222; font-size: 1.25rem; display: block; width: fit-content; padding: 1.25rem 5rem; border-radius: .25rem; margin-top: 2rem;}
+
+.new-section .container .new-right{width: 50%; height: auto; }
+.new-section .container .new-right img{width: 100%; object-fit: cover;}
+
+.new-section .container .new-nav li a{font-size: 6rem; color: #222; display: flex; vertical-align: bottom;}
+.new-section .container .new-nav li a::before{content: ''; background-image: url(/images/new-page/icon_news_arrow.png); display:inline-block;  background-size: 6rem 6rem; width: 0; height: 6rem; transition: .3s ease;}
+.new-section .container .new-nav li a:hover::before{width: 6rem;}
