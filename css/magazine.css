@@ -1,0 +1,12 @@
+@import url(//db.onlinewebfonts.com/c/81db551dd19e720ed0bc40dbde312130?family=Beausite+Classic+Regular);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
+
+html {scroll-behavior: smooth;}
+body {font-family: "Beausite Classic Regular", "Noto Sans KR";}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ol,ul {list-style: none;}
+a{text-decoration: none;}
+
+.wrapper{width:100%; height:auto; overflow:hidden;}
+.container{width: 100%; padding: 0 5rem; max-width: 2000px; margin: auto;}
+section{padding: 5rem 0;}

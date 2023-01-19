@@ -62,9 +62,9 @@
     .new-section .container .new-left .new-title{font-size: 4rem;}
     .new-section .container .new-left .desc{padding-right: 4rem;}
 
-    .new-section .container .new-nav{margin-top: 15rem;}
-    .new-section .container .new-nav li a {font-size: 4rem;}
-    .new-section .container .new-nav li a::before{display: none;}
+    .new-section .container .new-bottom-nav{margin-top: 15rem;}
+    .new-section .container .new-bottom-nav li a {font-size: 4rem;}
+    .new-section .container .new-bottom-nav li a::before{display: none;}
 
 }
 
@@ -177,4 +177,19 @@
     #footer .footer-container .footer-txt > div p{font-size: 1.2rem;}
     #footer .footer-container .footer-txt > div a{font-size: 1.7rem;}
     #footer .footer-container .byline{margin-top: 7rem;}
+
+    /* New Page Style */
+    .new-section .container{padding: 0;}
+    .new-section .inner-container{padding: 0 1.5rem;}
+    
+    .new-section .container .new-contents > .inner-container {width: 100%;}
+    .new-section .container .new-contents{flex-direction: column;}
+    .new-section .container .new-left{width: 100%; position: relative;}
+    .new-section .container .new-left h3{font-size: 1.75rem; margin-bottom: .5rem;}
+    .new-section .container .new-left h2{font-size: 3rem;}
+    .new-section .container .new-left .new-title{font-size: 3rem;}
+    .new-section .container .new-left .new-btn{width: 100%; text-align: center; margin: 2.5rem 0 2rem;}
+    .new-section .container .new-right{width: 100%; row-gap: 0;}
+
+    .new-section .container .new-bottom-nav li a{font-size: 2.5rem; line-height: 1.3;}
 }
