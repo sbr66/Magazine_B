@@ -37,9 +37,11 @@ section{padding: 5rem 0;}
 
 
 /* Mobile Menu Style */
+.wrapper.active{height: 100vh;}
 .wrapper.active #header{background: #222; height: 100vh; transition: all .4s ease;}
 .wrapper.active #header .container{flex-direction: column-reverse; row-gap: 3rem;}
-.wrapper.active #header .left .left-list{display: flex; flex-direction: column; font-size: 2rem;}
+.wrapper.active #header .left .left-list{display: flex; flex-direction: column; }
+.wrapper.active #header .left .left-list li a{font-size: 2.25rem; line-height: 1.3;}
 .wrapper.active #header .left .logo{display: none;}
 .wrapper.active #header .right-list{width: 100%; justify-content: space-between;}
 .wrapper.active #header .right-list > li {display: flex;}
