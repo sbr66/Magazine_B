@@ -1,11 +1,12 @@
 @media screen and (max-width:1750px){
     html{font-size: 15px;}
-
+    .cart-modal{width: 23%;}
 }
 
 @media screen and (max-width:1440px){
     html{font-size: 14px;}
     
+    .cart-modal{width: 27%;}
     /* Shop Section Style*/
     .shop-section .container .shop-contents{width: 75%;}
 
@@ -30,6 +31,8 @@
     #header .right-list{column-gap: 1rem;}
     #header .right-list li:not(.cart, .menu-btn){display: none;}
     #header .right-list .menu-btn{display: block;}
+
+    .cart-modal{width: 30%;}
     
     
     /* Main Section Style*/
@@ -71,6 +74,8 @@
 @media screen and (max-width: 991px){
     section{padding: 2rem 0;}
     .container{padding: 0 1.5rem;}
+
+    .cart-modal{width: 35%;}
 
     /* Main Section Style*/
     .main-section .page-left{left: 1.5rem;}
@@ -114,6 +119,9 @@
     #header .left .logo{height: 1.75rem;}
     #header .right-list{column-gap: 1.25rem;}
 
+    .cart-modal{width: 100%; transition: all .5s ease;}
+    .cart-modal .cart-top .cart-count .cart-modal-back{display: block;}
+    
     /* Main Section Style */
     .main-section .main-wrapper.active{justify-content: flex-end;}
     .main-section .main-txt{padding-bottom: 2.5rem; row-gap: .5rem; position: absolute;}

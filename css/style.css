@@ -29,7 +29,10 @@ section{padding: 5rem 0;}
 
 .cart-modal{width: 20%; height: 100vh; padding: 1rem 2rem; position: fixed; right: 0; background: #222; z-index: 200; transform: translateX(+101%); transition: all .3s ease;}
 .cart-modal .cart-top{display: flex; justify-content: space-between;}
-.cart-modal .cart-top .cart-count{display: flex; color: #fff; font-size: 1.25rem;}
+.cart-modal .cart-top .cart-count{display: flex; }
+.cart-modal .cart-top .cart-count .cart-modal-back{width: 1.25rem; margin-right: .25rem; display: none;}
+.cart-modal .cart-top .cart-count .cart-modal-back img{width: 100%; height: auto;}
+.cart-modal .cart-top .cart-count p{color: #fff; font-size: 1.25rem;}
 .cart-modal .cart-top .cart-close{color: #fff; font-size: 1.25rem; cursor: pointer;}
 
 
