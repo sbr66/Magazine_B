@@ -12,7 +12,7 @@ a{text-decoration: none;}
 section{padding: 5rem 0;}
 
 /* Header style */
-#header{width: 100%; padding: 1.25rem 0; backdrop-filter: blur(50px) brightness(95%); position:fixed; z-index:20;}
+#header{width: 100%; padding: 1.25rem 0; backdrop-filter: blur(50px) brightness(95%); position:fixed; z-index:20; transition: all .5s ease;}
 #header > .container {width: 100%; height: auto; display: flex; justify-content: space-between; font-size: 1.25rem; position: relative;}
 #header .left {display: flex; align-items: center;}
 #header .left .logo {display: flex; height: 1.5rem; _width: 1.25rem; margin-right: 2.5rem;}
@@ -37,12 +37,7 @@ section{padding: 5rem 0;}
 
 
 /* Mobile Menu Style */
-.wrapper.active > *:not(#header){display: none;}
-.wrapper.active #header{background: #222; height: 100vh; animation: menu .7s 1;}
-@keyframes menu {
-    from {opacity: 0.5;}
-    to {opacity: 1;}
-}
+.wrapper.active #header{background: #222; height: 100vh; transition: all .4s ease;}
 .wrapper.active #header .container{flex-direction: column-reverse; row-gap: 3rem;}
 .wrapper.active #header .left .left-list{display: flex; flex-direction: column; font-size: 2rem;}
 .wrapper.active #header .left .logo{display: none;}

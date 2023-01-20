@@ -34,7 +34,6 @@
 
     .cart-modal{width: 30%;}
     
-    
     /* Main Section Style*/
     .main-section .page-left{left: 3rem; bottom: 2.5rem;}
     .main-section .page-right{right: 3rem; bottom: 2.5rem;}
@@ -121,7 +120,7 @@
 
     .cart-modal{width: 100%; transition: all .5s ease;}
     .cart-modal .cart-top .cart-count .cart-modal-back{display: block;}
-    
+
     /* Main Section Style */
     .main-section .main-wrapper.active{justify-content: flex-end;}
     .main-section .main-txt{padding-bottom: 2.5rem; row-gap: .5rem; position: absolute;}
