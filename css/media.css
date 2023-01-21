@@ -120,7 +120,7 @@
     .wrapper.active #header .left .left-list li a{font-size: 2.5rem;}
 
     .cart-modal{width: 100%; transition: all .5s ease;}
-    .cart-modal .cart-top .cart-count .cart-modal-back{display: block;}
+    .cart-modal .cart-top .cart-count .cart-modal-back{display: flex; align-items: center; cursor: pointer;}
 
     /* Main Section Style */
     .main-section .main-wrapper.active{justify-content: flex-end;}
