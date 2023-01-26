@@ -10,13 +10,13 @@ const bookSection = document.querySelector(".books-section");
 
 const dateBox = document.querySelector(".date-box");
 
-// Mobile Menu Toggle
-const wrapper = document.querySelector(".wrapper");
-const menuBtn = document.querySelector(".menu-btn");
+// // Mobile Menu Toggle
+// const wrapper = document.querySelector(".wrapper");
+// const menuBtn = document.querySelector(".menu-btn");
 
-menuBtn.addEventListener("click", () => {
-  wrapper.classList.toggle("active");
-});
+// menuBtn.addEventListener("click", () => {
+//   wrapper.classList.toggle("active");
+// });
 
 // Main Section
 // function changeMain() {
