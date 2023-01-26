@@ -1,4 +1,4 @@
-fetch("header.html")
+fetch("/Magazine_B/header.html")
   .then((res) => res.text())
   .then((data) => {
     document.querySelector("header").innerHTML = data;
@@ -13,7 +13,7 @@ fetch("header.html")
 
     // 페이지별 헤더 디자인 변경
     const url = window.location.pathname;
-    if (!url.includes("index")) {
+    if (!url.includes("index") && url.includes("html")) {
       const li = document.querySelectorAll("#header li");
       const aLi = document.querySelectorAll("#header li a");
       const header = document.querySelector("#header");
@@ -35,8 +35,8 @@ fetch("header.html")
         item.style.color = "#222";
       });
 
-      headerLogo.setAttribute("src", "/images/header_logo.svg");
-      languageLogo.setAttribute("src", "/images/asset5.png");
+      headerLogo.setAttribute("src", "/Magazine_B/images/header_logo.svg");
+      languageLogo.setAttribute("src", "/Magazine_B/images/asset5.png");
 
       header.style.backdropFilter = "none";
       header.style.backgroundColor = sectionBackground;

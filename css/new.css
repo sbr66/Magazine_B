@@ -25,5 +25,5 @@ section{padding: 5rem 0; background: rgb(240, 227, 227);}
 
 .new-section .container .new-bottom-nav{margin-top: 6rem; margin-top: 30rem;}
 .new-section .container .new-bottom-nav li a{font-size: 6rem; color: #222; display: flex; align-items: center; line-height: 1.1;}
-.new-section .container .new-bottom-nav li a::before{content: ''; background-image: url(/images/new-page/icon_news_arrow.png); display:inline-block;  background-size: 6rem 6rem; width: 0; height: 6rem; transition: .3s ease;}
+.new-section .container .new-bottom-nav li a::before{content: ''; background-image: url(/Magazine_B/images/new-page/icon_news_arrow.png); display:inline-block;  background-size: 6rem 6rem; width: 0; height: 6rem; transition: .3s ease;}
 .new-section .container .new-bottom-nav li a:hover::before{width: 6rem;}
