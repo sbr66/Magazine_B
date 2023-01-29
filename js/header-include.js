@@ -41,4 +41,5 @@ fetch("/Magazine_B/header.html")
       header.style.backdropFilter = "none";
       header.style.backgroundColor = sectionBackground;
     }
-  });
+  })
+  .catch((err) => console.log(err));
