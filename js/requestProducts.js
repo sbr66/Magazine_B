@@ -1,5 +1,5 @@
 const pageUrl = window.location.search;
-console.log(pageUrl);
+// console.log(pageUrl);
 
 fetch(`/magazine_b_back/get_products.php${pageUrl}`)
   .then((res) => res.json())
@@ -41,13 +41,17 @@ fetch(`/magazine_b_back/get_products.php${pageUrl}`)
   })
   .catch((err) => console.log(err));
 
-fetch("/magazine_b_back/get_products2.php")
-  .then((res) => res.text())
+fetch("/magazine_b_back/product_page.php")
+  .then((res) => res.json())
   .then((data) => {
     const productPage = document.querySelector(".product-page");
     let dataEl;
-    for (i = 1; i <= data; i++) {
-      dataEl = `<input type = "submit" name = "page" value= "${i}">`;
-      productPage.innerHTML += dataEl;
+    for (i = 1; i <= data.page_num; i++) {
+      dataEl = `<input type="submit" name="page" value="${i}">`;
+      productPage.innerHTML += dataEl; // pagenation
     }
-  });
+
+    const totalNum = document.querySelector(".total");
+    totalNum.innerHTML = `TOTAL ${data.data_num}`; // 제품 총 수량
+  })
+  .catch((err) => console.log(err));

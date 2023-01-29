@@ -110,64 +110,6 @@ shopTitles.forEach((title, idx) => {
   });
 });
 
-// ~767px Shop Section
-
-// const shopContainer = document.querySelector(".shop-container").cloneNode();
-// const shopContentsClone = document.querySelector(".shop-contents").cloneNode();
-// shopContainer.appendChild(shopContentsClone);
-// shopSection.appendChild(shopContainer);
-
-// window.addEventListener("resize", function () {
-// const ww = window.innerWidth;
-// if (ww <= 767) {
-//   console.log("true");
-//   for (let i = 0; i < 3; i++) {
-//     const container = document.querySelector(".shop-container").cloneNode();
-//     const shopText = document
-//       .querySelector(".shop-container > p")
-//       .cloneNode(true);
-//     const shopContentsClone = document
-//       .querySelector(".shop-contents")
-//       .cloneNode();
-//     container.appendChild(shopText);
-//     container.appendChild(shopContentsClone);
-//     shopSection.appendChild(container);
-//   }
-//   const shopContainer = document.querySelectorAll(".shop-container");
-//   const shopBox = document.querySelectorAll(".shop-contents");
-//   const shopTitles = document.querySelectorAll(".shop-title");
-//   const shopContent = document.querySelectorAll(".shop-preview-box");
-
-//   shopBox.forEach((box, idx) => {
-//     // console.log(box);
-
-//     for (let i = 0; i < shopContent.length; i++) {
-//       box.append(shopContent[idx]);
-//     }
-//   });
-
-//   const shopTitle = document.querySelectorAll(".shop-title > h2");
-
-//   shopTitles.forEach((title, idx) => {
-//     console.log(idx);
-//     for (let i = 0; i < shopTitle.length; i++) {
-//       title.append(shopTitle[idx]);
-//     }
-//   });
-
-//   console.log(shopContainer[0]);
-//   console.log(shopContainer[1]);
-//   console.log(shopContainer[2]);
-//   console.log(shopContainer[3]);
-
-//   shopContainer[1].style.background = "rgb(249, 231, 159)";
-//   shopContainer[2].style.background = "rgb(239, 219, 228)";
-//   shopContainer[3].style.background = "rgb(217, 228, 241)";
-// } else {
-//   console.log("false");
-// }
-// });
-
 // Books Section Tap
 bookTitles.forEach((title, idx) => {
   title.addEventListener("click", () => {

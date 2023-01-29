@@ -1,4 +1,4 @@
-fetch("/Magazine_B/header.html")
+fetch("/magazine_b/header.html")
   .then((res) => res.text())
   .then((data) => {
     document.querySelector("header").innerHTML = data;
@@ -35,8 +35,8 @@ fetch("/Magazine_B/header.html")
         item.style.color = "#222";
       });
 
-      headerLogo.setAttribute("src", "/Magazine_B/images/header_logo.svg");
-      languageLogo.setAttribute("src", "/Magazine_B/images/asset5.png");
+      headerLogo.setAttribute("src", "/magazine_b/images/header_logo.svg");
+      languageLogo.setAttribute("src", "/magazine_b/images/asset5.png");
 
       header.style.backdropFilter = "none";
       header.style.backgroundColor = sectionBackground;
