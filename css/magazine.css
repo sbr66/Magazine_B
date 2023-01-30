@@ -24,7 +24,7 @@ section{padding: 5rem 0; background: #fff;}
 .magazine-section .container .mag-products .mag-product-item .prd-img-wrapper {width: 50%; padding: .5rem;}
 .magazine-section .container .mag-products .mag-product-item img{width: 100%;}
 .magazine-section .container .mag-products .mag-product-item .mag-info-wrapper{width: 100%; height: auto; padding: 0 .5rem; display: flex; justify-content: space-between;}
-.magazine-section .container .mag-products .mag-info-wrapper .mag-info{display: flex; column-gap: 1rem;}
+.magazine-section .container .mag-products .mag-info-wrapper .mag-info{display: flex; column-gap: 1rem; align-items: baseline;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-info > div {color: #222; text-transform: uppercase;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-info > div a{color: #222;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-cart-btn{border: none; border-bottom: 1px solid #222; background: #fff; color: #222;}

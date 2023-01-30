@@ -9,11 +9,18 @@
     <link rel="shortcut icon" href="/magazine_b/images/favicon.ico" />
     <link rel="apple-touch-icon" href="/magazine_b/images/favicon.ico" />
 
+    <!-- Rimix Icon Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- Main Style Sheet Link -->
     <link rel="stylesheet" href="/magazine_b/css/style.css" />
     <link rel="stylesheet" href="/magazine_b/css/detail.css" />
   </head>
   <body>
+    <header id="header"></header>
     <section class="detail-section">
       <div class="container">
         <div class="detail-left">
@@ -22,10 +29,18 @@
             <p>ISSUE NO.24</p>
           </div>
           <h2 class="detail-title">YOGURT</h2>
-          <p class="detail-price">&#92;18,000</p>
+          <p class="detail-price">&#8361;18,000</p>
+          <div class="qnts">
+            <i class="ri-subtract-line"></i>
+            <p class="count">1</p>
+            <i class="ri-add-line"></i>
+          </div>
         </div>
         <div class="detail-right">
-          <button>&#92;18,000 ADD TO CART</button>
+          <button>
+            <p>&#8361;18,000</p>
+            <p>ADD TO CART</p>
+          </button>
           <div class="detail-desc">
             <p class="desc-title">DESCRIPTION</p>
             <p>
@@ -57,5 +72,6 @@
         <img src="/magazine_b/images/detail-page/copy-10.png" alt="" />
       </div>
     </section>
+    <script src="/magazine_b/js/header-include.js"></script>
   </body>
 </html>
