@@ -1,7 +1,7 @@
 fetch("/magazine_b/header.html")
   .then((res) => res.text())
   .then((data) => {
-    document.querySelector("header").innerHTML = data;
+    document.querySelector("#header").innerHTML = data;
 
     // Mobile Menu Toggle
     const wrapper = document.querySelector(".wrapper");

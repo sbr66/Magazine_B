@@ -11,7 +11,7 @@ fetch(`/magazine_b_back/get_products.php${pageUrl}`)
       dataEl = `
         <div class="mag-product-item ${item.mag_cate}">
             <div class="prd-img-wrapper">
-                <a href="#">
+                <a href="/magazine_b/detail.html?${item.mag_idx}">
                 <img
                     src="${item.mag_img1}"
                     alt=""
@@ -19,7 +19,7 @@ fetch(`/magazine_b_back/get_products.php${pageUrl}`)
             </div>
 
             <div class="prd-img-wrapper">
-                <a href="#">
+                <a href="/magazine_b/detail.html?${item.mag_idx}">
                 <img
                     src="${item.mag_img2}"
                     alt=""
@@ -28,7 +28,7 @@ fetch(`/magazine_b_back/get_products.php${pageUrl}`)
 
             <div class="mag-info-wrapper">
                 <div class="mag-info">
-                <div><a href="#">${item.mag_title}</a></div>
+                <div><a href="/magazine_b/detail.html?${item.mag_idx}">${item.mag_title}</a></div>
                 <div>ISSUE NO.${item.mag_issue}</div>
                 <div>${item.mag_cate}</div>
                 <div>₩${item.mag_price}</div>

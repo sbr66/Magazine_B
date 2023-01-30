@@ -6,7 +6,7 @@ body{overflow-x: hidden;}
 .detail-section .container{display: flex; margin-bottom: 8rem;}
 .detail-section .container .detail-left{width: 70%;}
 .detail-section .container .detail-left .detail-label{display: flex; column-gap: 1.5rem;}
-.detail-section .container .detail-left .detail-label p{font-size: 1.75rem;}
+.detail-section .container .detail-left .detail-label p{font-size: 1.75rem; text-transform: uppercase;}
 .detail-section .container .detail-left .detail-title{font-size: 6rem; font-weight: normal;}
 .detail-section .container .detail-left .detail-price{font-size: 1.75rem; margin-top: 1rem;}
 .detail-section .container .detail-left .qnts{display: flex; column-gap: .75rem; align-items: center; margin-top: 1rem;}
