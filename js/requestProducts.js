@@ -1,5 +1,5 @@
 const pageUrl = window.location.search;
-// console.log(pageUrl);
+console.log(pageUrl);
 
 fetch(`/magazine_b_back/get_products.php${pageUrl}`)
   .then((res) => res.json())
