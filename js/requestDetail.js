@@ -32,7 +32,7 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
         </div>
     </div>`;
     detailBox.innerHTML = magazineInfo;
-
+    // &#8361;
     const detailHeader = document.querySelector("#detail-header");
     let headerInfo;
     headerInfo = ` <div class="container">
@@ -40,7 +40,8 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
       <p>${data.mag_cate}</p>
       <p>ISSUE NO.${data.mag_issue}</p>
       <p>${data.mag_title}</p>
-      <p>&#8361;${data.mag_price}</p>
+      <p>￦${data.mag_price}</p>
+      
     </div>
     <div class="header-cart-wrapper">
       <div class="header-qnts">
@@ -49,7 +50,7 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
         <i class="ri-add-line"></i>
       </div>
       <button class="cart-btn">
-        <p>&#8361;${data.mag_price}</p>
+        <p>￦${data.mag_price}</p>
         <p>ADD TO CART</p>
       </button>
     </div>
