@@ -6,14 +6,15 @@ fetch("/magazine_b/header.html")
     // Mobile Menu Toggle
     const wrapper = document.querySelector(".wrapper");
     const menuBtn = document.querySelector(".menu-btn");
-
+    const wrapperCls = wrapper.classList.length;
     menuBtn.addEventListener("click", () => {
       wrapper.classList.toggle("active");
+      console.log(wrapperCls);
     });
 
     // 페이지별 헤더 디자인 변경
     const url = window.location.pathname;
-    if (!url.includes("index") && url.includes("html")) {
+    if (!url.includes("index") && url.includes("html") && wrapperCls == 1) {
       const li = document.querySelectorAll("#header li");
       const aLi = document.querySelectorAll("#header li a");
       const header = document.querySelector("#header");
@@ -54,6 +55,7 @@ fetch("/magazine_b/header.html")
     body.addEventListener("click", cartModalToggle);
 
     let cartModalOpen = false;
+    // console.log(cartModalOpen);
 
     function cartModalToggle(e) {
       // console.log(cartModalOpen);
