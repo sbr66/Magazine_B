@@ -5,7 +5,7 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
   .then((res) => res.json())
   .then((data) => {
     const detailBox = document.querySelector(".detail-container");
-    console.log(data);
+    // console.log(data);
     let magazineInfo;
     magazineInfo = `
     <div class="detail-left">
@@ -32,7 +32,12 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
         </div>
     </div>`;
     detailBox.innerHTML = magazineInfo;
-    // &#8361;
+
+    const detailDesc = document.querySelector(".res-desc .container p");
+    // console.log(detailDesc);
+    const descEl = data.mag_desc;
+    detailDesc.append(descEl);
+
     const detailHeader = document.querySelector("#detail-header");
     let headerInfo;
     headerInfo = ` <div class="container">
@@ -61,7 +66,7 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
 
 window.addEventListener("scroll", function () {
   const scrollY = this.scrollY;
-  console.log(scrollY);
+  // console.log(scrollY);
   const detailHeader = this.document.querySelector("#detail-header");
   const commonHeader = this.document.querySelector("#header");
 
