@@ -6,15 +6,43 @@ fetch("/magazine_b/header.html")
     // Mobile Menu Toggle
     const wrapper = document.querySelector(".wrapper");
     const menuBtn = document.querySelector(".menu-btn");
-    const wrapperCls = wrapper.classList.length;
-    menuBtn.addEventListener("click", () => {
-      wrapper.classList.toggle("active");
-      console.log(wrapperCls);
-    });
+    const body = document.querySelector("body");
+
+    // menuBtn.addEventListener("click", () => {
+    //   wrapper.classList.toggle("active");
+    // });
+
+    body.addEventListener("click", mobileMenuToggle);
+
+    let mobileMenuOpen = false;
+    function mobileMenuToggle(e) {
+      const header = document.querySelector("#header");
+      const mobileLi = document.querySelectorAll("#header li");
+      const mobileLiA = document.querySelectorAll("#header li a");
+
+      if (mobileMenuOpen == false) {
+        if (e.target == menuBtn) {
+          wrapper.classList.add("active");
+          return (mobileMenuOpen = true);
+        }
+      }
+
+      if (mobileMenuOpen == true) {
+        if (e.target == menuBtn) {
+          wrapper.classList.remove("active");
+          return (mobileMenuOpen = false);
+        }
+      }
+    }
+    // console.log(mobileMenuOpen);
 
     // 페이지별 헤더 디자인 변경
     const url = window.location.pathname;
-    if (!url.includes("index") && url.includes("html") && wrapperCls == 1) {
+    if (
+      !url.includes("index") &&
+      url.includes("html") &&
+      mobileMenuOpen == false
+    ) {
       const li = document.querySelectorAll("#header li");
       const aLi = document.querySelectorAll("#header li a");
       const header = document.querySelector("#header");
@@ -49,7 +77,6 @@ fetch("/magazine_b/header.html")
     const cartModal = document.querySelector(".cart-modal");
     const cartTop = document.querySelector(".cart-top");
     const cartModalBack = document.querySelector(".cart-modal-back");
-    const body = document.querySelector("body");
     const overlay = document.querySelector(".overlay");
 
     body.addEventListener("click", cartModalToggle);
