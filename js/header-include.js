@@ -1,51 +1,31 @@
 fetch("/magazine_b/header.html")
   .then((res) => res.text())
   .then((data) => {
-    document.querySelector("#header").innerHTML = data;
+    document.querySelector(".header-wrapper").innerHTML = data;
 
     // Mobile Menu Toggle
-    const wrapper = document.querySelector(".wrapper");
     const menuBtn = document.querySelector(".menu-btn");
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const mobileMenu = document.querySelector(".mobile-menu");
     const body = document.querySelector("body");
 
-    // menuBtn.addEventListener("click", () => {
-    //   wrapper.classList.toggle("active");
-    // });
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      body.style.overflowY = "hidden";
+    });
 
-    body.addEventListener("click", mobileMenuToggle);
-
-    let mobileMenuOpen = false;
-    function mobileMenuToggle(e) {
-      const header = document.querySelector("#header");
-      const mobileLi = document.querySelectorAll("#header li");
-      const mobileLiA = document.querySelectorAll("#header li a");
-
-      if (mobileMenuOpen == false) {
-        if (e.target == menuBtn) {
-          wrapper.classList.add("active");
-          return (mobileMenuOpen = true);
-        }
-      }
-
-      if (mobileMenuOpen == true) {
-        if (e.target == menuBtn) {
-          wrapper.classList.remove("active");
-          return (mobileMenuOpen = false);
-        }
-      }
-    }
-    // console.log(mobileMenuOpen);
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      body.style.overflowY = "auto";
+    });
 
     // 페이지별 헤더 디자인 변경
     const url = window.location.pathname;
-    if (
-      !url.includes("index") &&
-      url.includes("html") &&
-      mobileMenuOpen == false
-    ) {
-      const li = document.querySelectorAll("#header li");
-      const aLi = document.querySelectorAll("#header li a");
-      const header = document.querySelector("#header");
+    const li = document.querySelectorAll("#header li");
+    const aLi = document.querySelectorAll("#header li a");
+    const header = document.querySelector("#header");
+
+    if (!url.includes("index") && url.includes("html")) {
       const headerLogo = document.querySelector("#header .left .logo img");
       const languageLogo = document.querySelector(
         "#header .right-list .language img"
