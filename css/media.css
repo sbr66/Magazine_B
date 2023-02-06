@@ -240,6 +240,14 @@
     .detail-section .res-desc .desc-title{font-size: 16px;}
     .detail-section .res-desc p{font-size: 16px;}
 
+    /* Sign-in Page Style */
+    .sign-in{height: auto;}
+    .sign-in .login-top-bar{display: flex;}
+    .sign-in .container{height: auto; margin: 2rem 0;}
+    .sign-in form{width: 100%; row-gap: 1.25rem;}
+    .sign-in form .login-btn{padding: 1rem 0;}
+    .sign-up-btn{width: 100%; padding: 1rem 0;}
+
 }
 
 @media screen and (max-width: 349px){
