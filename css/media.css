@@ -242,11 +242,20 @@
 
     /* Sign-in Page Style */
     .sign-in{height: auto;}
-    .sign-in .login-top-bar{display: flex;}
+    .sign-top-bar{display: flex;}
     .sign-in .container{height: auto; margin: 2rem 0;}
     .sign-in form{width: 100%; row-gap: 1.25rem;}
-    .sign-in form .login-btn{padding: 1rem 0;}
+    .send-btn{padding: 1rem 0;}
     .sign-up-btn{width: 100%; padding: 1rem 0;}
+
+    /* Sign-up Page Style */
+    .sign-up{height: auto;}
+    .sign-up > .sign-top-bar{margin-bottom: 5rem;}
+    .sign-up .container{height: auto; margin: 2rem 0;}
+    .sign-up .container form{width: 100%; row-gap: 1.25rem;}
+
+
+
 
 }
 

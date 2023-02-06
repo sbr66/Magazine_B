@@ -24,25 +24,29 @@
     <div class="wrapper">
       <div class="header-wrapper"></div>
 
-      <section class="sign-in">
+      <section class="sign-up">
         <div class="sign-top-bar">
-          <a href="/magazine_b/index.html" class="back-btn">
+          <a href="/magazine_b/sign-in.html" class="back-btn">
             <i class="ri-arrow-left-s-line"></i>
           </a>
-          <p>로그인</p>
+          <p>회원가입</p>
         </div>
         <div class="container">
           <form>
-            <input type="text" placeholder="아이디" name="id" class="id" />
-            <input
-              type="password"
-              placeholder="패스워드"
-              name="pwd"
-              class="pwd"
-            />
-            <input type="submit" value="로그인" class="send-btn" />
+            <p>아이디 *</p>
+            <input type="text" name="id" class="id" />
+            <p>비밀번호 *</p>
+            <input type="password" name="pwd" class="pwd" />
+            <p>비밀번호 확인 *</p>
+            <input type="password" class="rpwd" />
+            <p>이름 *</p>
+            <input type="text" name="name" class="name" />
+            <p>이메일 *</p>
+            <input type="email" name="email" class="email" />
+            <div class="form-line"></div>
+            <input type="submit" value="가입하기" class="send-btn" />
+            <input type="hidden" value="signup" name="req_sign" />
           </form>
-          <a href="/magazine_b/sign-up.html" class="sign-up-btn">회원가입</a>
         </div>
       </section>
 
