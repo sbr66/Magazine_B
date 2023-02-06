@@ -7,13 +7,13 @@ body {font-family: "Beausite Classic Regular", "Noto Sans KR";}
 ol,ul {list-style: none;}
 a{text-decoration: none;}
 
-.wrapper{width:100%; height:auto; overflow:hidden;}
+.wrapper{overflow:unset}
 .container{width: 100%; padding: 0 5rem; max-width: 2000px; margin: auto;}
 section{padding: 5rem 0; background: rgb(240, 227, 227);}
 
 .new-section .container .new-contents{display: flex; flex-wrap: wrap;}
 .new-section .container .new-contents > .inner-container{width: 50%;}
-.new-section .container .new-left{width: 100%; height: fit-content; position: sticky; top: 0;}
+.new-section .container .new-left{width: 100%; height: fit-content; position: sticky; top: 7rem;}
 .new-section .container .new-left h3{font-size: 2rem; color: #222; font-weight: normal; margin-bottom: 1rem;} 
 .new-section .container .new-left h2{font-size: 6rem; font-weight: normal; color: #222; line-height: 1;}
 .new-section .container .new-left .new-title{font-size: 6rem; color: #222; line-height: 1;}

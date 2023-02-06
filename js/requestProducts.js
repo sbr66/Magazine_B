@@ -1,7 +1,23 @@
 const pageUrl = window.location.search;
 console.log(pageUrl);
 
-fetch(`/magazine_b_back/get_products.php${pageUrl}`)
+fetch(`/magazine_b_back/product_page.php${pageUrl}`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    const productPage = document.querySelector(".product-page");
+    let dataEl;
+    for (i = 1; i <= data.page_num; i++) {
+      dataEl = `<input type="submit" name="page" value="${i}">`;
+      productPage.innerHTML += dataEl; // pagenation
+    }
+
+    const totalNum = document.querySelector(".total");
+    totalNum.innerHTML = `TOTAL ${data.data_num}`; // 제품 총 수량
+  })
+  .catch((err) => console.log(err));
+
+fetch(`/magazine_b_back/get_products.php${pageUrl}&page=1`)
   .then((res) => res.json())
   .then((data) => {
     const productBox = document.querySelector(".mag-products");
@@ -38,30 +54,15 @@ fetch(`/magazine_b_back/get_products.php${pageUrl}`)
         </div>`;
       productBox.innerHTML += dataEl;
 
-      const productPage = document.querySelector(".product-page");
-      let pageEl;
-      for (i = 1; i <= data.page_num; i++) {
-        pageEl = `<input type="submit" name="page" value="${i}">`;
-        productPage.innerHTML += pageEl; // pagenation
-      }
+      // const productPage = document.querySelector(".product-page");
+      // let pageEl;
+      // for (i = 1; i <= data.page_num; i++) {
+      //   pageEl = `<input type="submit" name="page" value="${i}">`;
+      //   productPage.innerHTML += pageEl; // pagenation
+      // }
 
-      const totalNum = document.querySelector(".total");
-      totalNum.innerHTML = `TOTAL ${data.data_num}`; // 제품 총 수량
+      // const totalNum = document.querySelector(".total");
+      // totalNum.innerHTML = `TOTAL ${data.data_num}`; // 제품 총 수량
     });
   })
   .catch((err) => console.log(err));
-
-// fetch(`/magazine_b_back/product_page.php${pageUrl}`)
-//   .then((res) => res.json())
-//   .then((data) => {
-//     const productPage = document.querySelector(".product-page");
-//     let dataEl;
-//     for (i = 1; i <= data.page_num; i++) {
-//       dataEl = `<input type="submit" name="page" value="${i}">`;
-//       productPage.innerHTML += dataEl; // pagenation
-//     }
-
-//     const totalNum = document.querySelector(".total");
-//     totalNum.innerHTML = `TOTAL ${data.data_num}`; // 제품 총 수량
-//   })
-//   .catch((err) => console.log(err));
