@@ -32,7 +32,7 @@
           <p>로그인</p>
         </div>
         <div class="container">
-          <form>
+          <form onsubmit="return false">
             <input type="text" placeholder="아이디" name="id" class="id" />
             <input
               type="password"
@@ -41,6 +41,7 @@
               class="pwd"
             />
             <input type="submit" value="로그인" class="send-btn" />
+            <input type="hidden" value="signin" name="req_sign" />
           </form>
           <a href="/magazine_b/sign-up.html" class="sign-up-btn">회원가입</a>
         </div>
@@ -49,6 +50,8 @@
       <footer id="footer"></footer>
     </div>
     <script src="/magazine_b/js/header-include.js"></script>
+    <script src="/magazine_b/js/loginResponse.js"></script>
     <script src="/magazine_b/js/footer.js"></script>
+    <script src="/magazine_b/js/signin.js"></script>
   </body>
 </html>

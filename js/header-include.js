@@ -19,38 +19,6 @@ fetch("/magazine_b/header.html")
       body.style.overflowY = "auto";
     });
 
-    // 페이지별 헤더 디자인 변경
-    const url = window.location.pathname;
-    const li = document.querySelectorAll("#header li");
-    const aLi = document.querySelectorAll("#header li a");
-    const header = document.querySelector("#header");
-
-    if (!url.includes("index") && url.includes("html")) {
-      const headerLogo = document.querySelector("#header .left .logo img");
-      const languageLogo = document.querySelector(
-        "#header .right-list .language img"
-      );
-
-      const section = document.querySelector("section");
-      const sectionStyle = getComputedStyle(section);
-      const sectionBackground = sectionStyle.backgroundColor;
-      console.log(sectionBackground);
-
-      li.forEach((item) => {
-        item.style.color = "#222";
-      });
-
-      aLi.forEach((item) => {
-        item.style.color = "#222";
-      });
-
-      headerLogo.setAttribute("src", "/magazine_b/images/header_logo.svg");
-      languageLogo.setAttribute("src", "/magazine_b/images/asset5.png");
-
-      header.style.backdropFilter = "none";
-      header.style.backgroundColor = sectionBackground;
-    }
-
     // Cart Modal
     const cartBtn = document.querySelector("#header .cart");
     const cartCloseBtn = document.querySelector(".cart-close");
@@ -89,5 +57,86 @@ fetch("/magazine_b/header.html")
         }
       }
     }
+
+    // 로그인 & 로그아웃 버튼
+    const loginBtn = document.querySelectorAll(".login");
+    // console.log(loginBtn);
+
+    fetch("/magazine_b_back/check_sign.php")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(
+          "id :",
+          data.userid,
+          "user idx :",
+          data.user_idx,
+          "cart count :",
+          data.cart_count,
+          "user level :",
+          data.user_level
+        );
+
+        if (data.userid === "guest") {
+          loginBtn.forEach((btn) => {
+            btn.innerHTML = '<a href="/magazine_b/sign-in.html">Login</a>';
+          });
+        } else {
+          loginBtn.forEach((btn) => {
+            btn.innerHTML = `<div class="signout"><span>${data.userid}</span> &nbsp;| <a href="#">Logout</a></div>`;
+          });
+        }
+
+        const signoutBtn = document.querySelectorAll(".signout a");
+
+        if (signoutBtn) {
+          signoutBtn.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault(); // 로그아웃하면 주소값 끝에 #이 붙으면서 details 페이지 사진들 사라짐 -> preventDefault()로 signoutBtn(a 태그)의 디폴트 속성 지움(href="#" 지움)
+              this.fetch("/soaply_backend/model/register.php?q=signout")
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                  this.alert("로그아웃 되었습니다.");
+                  this.location.reload();
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+            });
+          });
+        }
+
+        // 페이지별 헤더 디자인 변경
+        const url = window.location.pathname;
+        const li = document.querySelectorAll("#header li, #header li a");
+        const header = document.querySelector("#header");
+
+        if (!url.includes("index") && url.includes("html")) {
+          const headerLogo = document.querySelector("#header .left .logo img");
+          const languageLogo = document.querySelector(
+            "#header .right-list .language img"
+          );
+
+          const section = document.querySelector("section");
+          const sectionStyle = getComputedStyle(section);
+          const sectionBackground = sectionStyle.backgroundColor;
+          console.log(sectionBackground);
+
+          li.forEach((item) => {
+            item.style.color = "#222";
+          });
+
+          headerLogo.setAttribute("src", "/magazine_b/images/header_logo.svg");
+          languageLogo.setAttribute("src", "/magazine_b/images/asset5.png");
+
+          header.style.backdropFilter = "none";
+          header.style.backgroundColor = sectionBackground;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   })
   .catch((err) => console.log(err));
