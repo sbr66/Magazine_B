@@ -84,16 +84,15 @@ fetch("/magazine_b/header.html")
           });
         } else {
           loginBtn.forEach((btn) => {
-            btn.innerHTML = `<div class="signout"><span>${data.userid}</span> &nbsp;| <a href="#">Logout</a></div>`;
+            btn.innerHTML = `<div class="signout"><span>${data.userid}</span> &nbsp;| <span class="signout-btn">Logout</span></div>`;
           });
         }
 
-        const signoutBtn = document.querySelectorAll(".signout a");
+        const signoutBtn = document.querySelectorAll(".signout-btn");
 
         if (signoutBtn) {
           signoutBtn.forEach((btn) => {
-            btn.addEventListener("click", (e) => {
-              e.preventDefault(); // 로그아웃하면 주소값 끝에 #이 붙으면서 details 페이지 사진들 사라짐 -> preventDefault()로 signoutBtn(a 태그)의 디폴트 속성 지움(href="#" 지움)
+            btn.addEventListener("click", () => {
               this.fetch("/soaply_backend/model/register.php?q=signout")
                 .then((res) => res.json())
                 .then((data) => {
@@ -122,7 +121,7 @@ fetch("/magazine_b/header.html")
           const section = document.querySelector("section");
           const sectionStyle = getComputedStyle(section);
           const sectionBackground = sectionStyle.backgroundColor;
-          console.log(sectionBackground);
+          // console.log(sectionBackground);
 
           li.forEach((item) => {
             item.style.color = "#222";

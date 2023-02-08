@@ -1,0 +1,2 @@
+-detail page detail header cart-btn align
+-detail page 수량부분(.qnts) align
