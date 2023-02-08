@@ -11,7 +11,7 @@ body{overflow-x: hidden;}
 #detail-header .container .header-cart-wrapper .header-qnts{display: flex; align-items: center;}
 #detail-header .container .header-cart-wrapper .header-qnts p{font-size: 1.75rem; margin: 0 .5rem;}
 #detail-header .container .header-cart-wrapper .header-qnts i{font-size: 1.75rem; cursor: pointer;}
-#detail-header .container .header-cart-wrapper .cart-btn{display: flex; border: none; background: black; color: #fff; padding: 0.75rem 3.5rem; border-radius: .25rem; cursor: pointer; align-items: center; font-size: 1.1rem;}
+#detail-header .container .header-cart-wrapper .cart-btn{display: flex; border: none; background: black; color: #fff; padding: 0.75rem 3.5rem; border-radius: .25rem; cursor: pointer; _align-items: center; font-size: 1rem;}
 #detail-header .container .header-cart-wrapper .cart-btn p{font-size: 1.25rem;}
 #detail-header .container .header-cart-wrapper .cart-btn p:nth-child(1){font-weight: bold; margin-right: 1rem;}
 
@@ -28,7 +28,7 @@ body{overflow-x: hidden;}
 .detail-section .container .detail-left .qnts p{font-size: 1.75rem;}
 
 .detail-section .container .detail-right{width: 30%;}
-.detail-section .container .detail-right button{display: flex; width: 100%; padding: 1rem; border: none; border-radius: .25rem; background: black; justify-content: center; cursor: pointer; color: #fff; font-size: 1.1rem; align-items: center;}
+.detail-section .container .detail-right button{display: flex; width: 100%; padding: 1rem; border: none; border-radius: .25rem; background: black; justify-content: center; cursor: pointer; color: #fff; font-size: 1rem; _align-items: center;}
 .detail-section .container .detail-right button p{color: #fff; font-size: 1.25rem;}
 .detail-section .container .detail-right button p:nth-child(1){font-weight: bold; margin-right: 1rem;}
 .detail-section .container .detail-right .detail-desc{width: 100%; margin-top:  5rem;}

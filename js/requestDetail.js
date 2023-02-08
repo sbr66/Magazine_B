@@ -79,7 +79,7 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
       </div>`;
     detailHeader.innerHTML = headerInfo;
 
-    // 수량 증가 및 합산 가격 출력
+    // 수량 변경 및 합산 가격 출력
     const countBtn = document.querySelectorAll(".qnts i");
     const countEl = document.querySelectorAll(".count");
     const sumEl = document.querySelectorAll(".sum-price");
@@ -123,8 +123,8 @@ fetch(`/magazine_b_back/get_detail.php?idx=${urlIdx}`)
 window.addEventListener("scroll", function () {
   const scrollY = this.scrollY;
   // console.log(scrollY);
-  const detailHeader = this.document.querySelector("#detail-header");
-  const commonHeader = this.document.querySelector("#header");
+  const detailHeader = document.querySelector("#detail-header");
+  const commonHeader = document.querySelector("#header");
 
   if (scrollY >= 115) {
     detailHeader.style.opacity = "100";
