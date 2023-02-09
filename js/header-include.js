@@ -61,7 +61,6 @@ fetch("/magazine_b/header.html")
     // 로그인 & 로그아웃 버튼
     const loginBtn = document.querySelectorAll(".login");
     // console.log(loginBtn);
-
     fetch("/magazine_b_back/check_sign.php")
       .then((res) => {
         return res.json();
@@ -133,28 +132,91 @@ fetch("/magazine_b/header.html")
           header.style.backdropFilter = "none";
           header.style.backgroundColor = sectionBackground;
         }
-
-        // Detail Page Header
-        const detailUrl = window.location.href;
-        if (detailUrl.includes("detail")) {
-          window.addEventListener("scroll", function () {
-            const scrollY = this.scrollY;
-            // console.log(scrollY);
-            const detailHeader = document.querySelector("#detail-header");
-            const commonHeader = document.querySelector("#header");
-
-            if (scrollY >= 115) {
-              detailHeader.style.opacity = "100";
-              commonHeader.style.display = "none";
-            } else {
-              detailHeader.style.opacity = "0";
-              commonHeader.style.display = "block";
-            }
-          });
-        }
       })
       .catch((err) => {
         console.log(err);
       });
+
+    // Detail Page Header
+    const detailUrl = window.location.href;
+    if (detailUrl.includes("detail")) {
+      window.addEventListener("scroll", function () {
+        const scrollY = this.scrollY;
+        // console.log(scrollY);
+        const detailHeader = document.querySelector("#detail-header");
+        const commonHeader = document.querySelector("#header");
+
+        if (scrollY >= 115) {
+          detailHeader.style.opacity = "100";
+          commonHeader.style.display = "none";
+        } else {
+          detailHeader.style.opacity = "0";
+          commonHeader.style.display = "block";
+        }
+      });
+    }
+
+    fetch("/magazine_b_back/cart_ctrl.php?req_cart=get_cart")
+      .then((res) => res.json())
+      .then((cartData) => {
+        console.log(cartData);
+        const cartModalWrapper = document.querySelector(".cart-lists-wrapper");
+        const cartCountNum = document.querySelectorAll(".cart-count-num");
+        if (!cartData || cartData.length === 0) {
+          cartModalWrapper.innerHTML = `<p class="no-cart">장바구니에 상품이 없습니다.</p>`;
+          cartCountNum.forEach((num) => {
+            num.textContent = "[0]";
+          });
+          return;
+        }
+
+        // 추가한 상품 카트에 출력
+        cartData.map((list) => {
+          console.log(list);
+          cartListEl = `
+            <div class="cart-list">
+              <div class="cart-img">
+                <img src="${list.cart_img}" alt="" />
+              </div>
+      
+              <div class="cart-info-box">
+                <p class="cart-title">${list.cart_name}</p>
+                <p>￦${list.cart_sum}</p>
+                <div class="cart-qnts">
+                  <i class="ri-subtract-line"></i>
+                  <p class="cart-count">${list.cart_count}</p>
+                  <i class="ri-add-line"></i>
+                </div>
+              </div>
+
+              <i class="ri-close-line remove-cart" id="btn-${list.cart_idx}"></i>
+            </div>
+          `;
+          cartModalWrapper.innerHTML += cartListEl;
+
+          cartCountNum.forEach((num) => {
+            num.textContent = `[${list.cart_count}]`;
+          });
+        });
+
+        // 카트 상품 삭제
+        const rmvCartBtn = document.querySelectorAll(".remove-cart");
+        rmvCartBtn.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const cartIdx = Number(this.getAttribute("id").split("-")[1]);
+            fetch(
+              `/main_backend/model/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
+            )
+              .then((res) => res.json())
+              .then((del) => {
+                console.log(del);
+                alert(del.msg);
+                location.reload();
+              })
+              .catch((err) => console.log(err));
+          });
+        });
+      })
+      .catch((err) => console.log(err));
   })
   .catch((err) => console.log(err));
