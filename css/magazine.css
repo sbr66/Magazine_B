@@ -14,7 +14,9 @@ section{padding: 5rem 0; background: #fff;}
 .magazine-section > .container{display: flex;}
 
 .magazine-section .container .mag-left{width: 54%; height: 85vh; display: flex; flex-direction: column; justify-content: space-between; position: sticky; top: 7rem;}
-.magazine-section .container .mag-left .mag-category li{font-size: 2.5rem; cursor: pointer; width: fit-content; transition: all .4s ease; display: flex; flex-direction: column; border: none; background: none; padding: .25rem 0}
+/* .magazine-section .container .mag-left .mag-category li{font-size: 2.5rem; cursor: pointer; width: fit-content; transition: all .4s ease; display: flex; flex-direction: column; border: none; background: none; _padding: .25rem 0} */
+.magazine-section .container .mag-left .mag-category button{font-size: 2.5rem; cursor: pointer; transition: all .4s ease; border: none; background: none;}
+.magazine-section .container .mag-left .mag-category button.gray{color: #ccc;}
 .magazine-section .container .mag-left .mag-count{display: flex; column-gap: 2rem;}
 .magazine-section .container .mag-left .mag-count .sort{display: flex; align-items: center;}
 

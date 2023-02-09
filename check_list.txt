@@ -1,3 +1,17 @@
 -detail page detail header cart-btn align
 -detail page 수량부분(.qnts) align
 -detail page cart-btn align
+
+          <form onsubmit="return false" class="cart-form">
+            <button type="submit" class="cart-btn">
+                ￦<p class="sum-price">${data.mag_price}</p>
+                <p>ADD TO CART</p>
+            </button>
+            <input type="hidden" name="cart_idx" value="${data.mag_idx}">
+            <input type="hidden" name="cart_name" value="${data.mag_title}">
+            <input type="hidden" name="cart_desc" value="${data.mag_desc}">
+            <input type="hidden" name="cart_price" value="${data.mag_price}">
+            <input type="hidden" name="cart_img" value="${data.mag_img1}">
+            <input type="hidden" name="cart_count" value="1" class="cart-count">
+            <input type="hidden" name="cart_sum" value="${data.mag_price}" class="cart-sum">
+          </form>  

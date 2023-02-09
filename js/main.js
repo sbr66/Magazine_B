@@ -36,7 +36,7 @@ const dateBox = document.querySelector(".date-box");
 
 // Main Section 페이지 자동 변경
 let currentIndex = 0;
-let time = 2000; // default time for auto slideshow
+let time = 3000; // default time for auto slideshow
 const mainScroll = document.querySelector(".scroll");
 const page = document.querySelector(".page-left");
 
@@ -58,7 +58,7 @@ const changeMain = setInterval(() => {
 
 setTimeout(() => {
   clearInterval(changeMain);
-}, 7000);
+}, 60000);
 
 // Main Section 클릭시 페이지 변경
 const beforeBtn = document.querySelectorAll(".before-page");

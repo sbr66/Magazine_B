@@ -133,6 +133,25 @@ fetch("/magazine_b/header.html")
           header.style.backdropFilter = "none";
           header.style.backgroundColor = sectionBackground;
         }
+
+        // Detail Page Header
+        const detailUrl = window.location.href;
+        if (detailUrl.includes("detail")) {
+          window.addEventListener("scroll", function () {
+            const scrollY = this.scrollY;
+            // console.log(scrollY);
+            const detailHeader = document.querySelector("#detail-header");
+            const commonHeader = document.querySelector("#header");
+
+            if (scrollY >= 115) {
+              detailHeader.style.opacity = "100";
+              commonHeader.style.display = "none";
+            } else {
+              detailHeader.style.opacity = "0";
+              commonHeader.style.display = "block";
+            }
+          });
+        }
       })
       .catch((err) => {
         console.log(err);

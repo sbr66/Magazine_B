@@ -16,68 +16,12 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- Header -->
       <div class="header-wrapper"></div>
+
       <section class="magazine-section">
         <div class="container">
           <div class="mag-left">
-            <div class="mag-category">
-              <form>
-                <label for="mag_b">Magazine B</label>
-                <input
-                  type="hidden"
-                  name="cate"
-                  value="Magazine B"
-                  id="mag_b"
-                />
-              </form>
-              <form>
-                <label for="mag_f">Magazine F</label>
-                <input
-                  type="hidden"
-                  name="cate"
-                  value="Magazine F"
-                  id="mag_f"
-                />
-              </form>
-              <form>
-                <label for="fashion">Fashion</label>
-                <input
-                  type="hidden"
-                  name="cate"
-                  value="Fashion"
-                  id="'fashion"
-                />
-              </form>
-              <form>
-                <label for="beauty">Beauty</label>
-                <input type="hidden" name="cate" value="Beauty" id="beauty" />
-              </form>
-              <form>
-                <label for=""></label>
-                <input type="hidden" name="cate" value="Design·Lifestyle" />
-              </form>
-              <form>
-                <label for="life">Design·Lifestyle</label>
-                <input type="hidden" name="cate" value="Food" id="life" />
-              </form>
-              <form>
-                <label for="tech">Tech</label>
-                <input type="hidden" name="cate" value="Tech" id="tech" />
-              </form>
-              <form>
-                <label for="media">Media</label>
-                <input type="hidden" name="cate" value="Media" id="media" />
-              </form>
-              <form>
-                <label for="hospitality">Hospitality</label>
-                <input
-                  type="hidden"
-                  name="cate"
-                  value="Hospitality"
-                  id="ospitality"
-                />
-              </form>
-            </div>
             <!-- <ul class="mag-category">
               <li>Magazine B</li>
               <li>Magazine F</li>
@@ -89,6 +33,45 @@
               <li>Media</li>
               <li>Hospitality</li>
             </ul> -->
+
+            <div class="mag-category">
+              <form>
+                <button type="submit">Magazine B</button>
+                <input type="hidden" name="cate" value="Magazine B" />
+              </form>
+              <form>
+                <button type="submit">Magazine F</button>
+                <input type="hidden" name="cate" value="Magazine F" />
+              </form>
+              <form>
+                <button type="submit">Fashion</button>
+                <input type="hidden" name="cate" value="Fashion" />
+              </form>
+              <form>
+                <button type="submit">Beauty</button>
+                <input type="hidden" name="cate" value="Beauty" />
+              </form>
+              <form>
+                <button type="submit">Design·Lifestyle</button>
+                <input type="hidden" name="cate" value="Design·Lifestyle" />
+              </form>
+              <form>
+                <button type="submit">Food</button>
+                <input type="hidden" name="cate" value="Food" />
+              </form>
+              <form>
+                <button type="submit">Tech</button>
+                <input type="hidden" name="cate" value="Tech" />
+              </form>
+              <form>
+                <button type="submit">Media</button>
+                <input type="hidden" name="cate" value="Media" />
+              </form>
+              <form>
+                <button type="submit">Hospitality</button>
+                <input type="hidden" name="cate" value="Hospitality" />
+              </form>
+            </div>
             <div class="mag-count">
               <div class="total">TOTAL 117</div>
               <div class="sort">
@@ -100,43 +83,18 @@
               </div>
             </div>
           </div>
+
           <div class="mag-right">
-            <div class="mag-products">
-              <!-- <div class="mag-product-item">
-            <div class="prd-img-wrapper">
-              <a href="#">
-                <img
-                  src="/magazine_b/images/magazine-page/52ccb1a9f1721b02dc563d2e6b63cc16.png"
-                  alt=""
-              /></a>
-            </div>
-
-            <div class="prd-img-wrapper">
-              <a href="#">
-                <img
-                  src="/magazine_b/images/magazine-page/468d9dbedd51441f580b6fc76ba82843.png"
-                  alt=""
-              /></a>
-            </div>
-
-            <div class="mag-info-wrapper">
-              <div class="mag-info">
-                <div><a href="#">YOGURT</a></div>
-                <div>ISSUE NO.24</div>
-                <div>MAGAZINE F</div>
-                <div>₩18,000</div>
-              </div>
-              <button class="mag-cart-btn">ADD TO CART</button>
-            </div>
-          </div> -->
-            </div>
+            <div class="mag-products"></div>
             <div class="product-page"></div>
           </div>
         </div>
       </section>
     </div>
+
     <script src="/magazine_b/js/header-include.js"></script>
     <script src="/magazine_b/js/magazine.js"></script>
-    <script src="/magazine_b/js/requestProducts.js"></script>
+    <!-- <script src="/magazine_b/js/requestProducts.js"></script> -->
+    <script src="/magazine_b/js/requestProducts_ex.js"></script>
   </body>
 </html>
