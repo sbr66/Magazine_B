@@ -23,10 +23,11 @@ fetch("/magazine_b/header.html")
     const cartBtn = document.querySelector("#header .cart");
     const cartCloseBtn = document.querySelector(".cart-close");
     const cartModal = document.querySelector(".cart-modal");
-    const cartTop = document.querySelector(".cart-top");
+    const mobileCartBtn = document.querySelector(".mobile-cart");
     const cartModalBack = document.querySelector(".cart-modal-back");
     const overlay = document.querySelector(".overlay");
 
+    // console.log(mobileCartBtn);
     body.addEventListener("click", cartModalToggle);
 
     let cartModalOpen = false;
@@ -35,7 +36,7 @@ fetch("/magazine_b/header.html")
     function cartModalToggle(e) {
       // console.log(cartModalOpen);
       // console.log(e.target);
-      if (e.target == cartBtn) {
+      if (e.target == cartBtn || e.target == mobileCartBtn) {
         // cart btn 클릭시 cart modal 열림
         cartModal.style.transform = "translateX(0)";
         overlay.classList.add("active");
@@ -43,14 +44,7 @@ fetch("/magazine_b/header.html")
       }
 
       if (cartModalOpen == true) {
-        // cart modal이 열려있을때
-        if (e.target != cartModal && e.target != cartTop) {
-          // cart modal 영역 외 클릭시 닫기
-          cartModal.style.transform = "translateX(+101%)";
-          overlay.classList.remove("active");
-          return (cartModalOpen = false);
-        } else if (e.target == cartCloseBtn || e.target == cartModalBack) {
-          // cart modal의 close 버튼 클릭시 닫기
+        if (e.target == overlay || e.target == cartCloseBtn) {
           cartModal.style.transform = "translateX(+101%)";
           overlay.classList.remove("active");
           return (cartModalOpen = false);
@@ -162,6 +156,8 @@ fetch("/magazine_b/header.html")
         console.log(cartData);
         const cartModalWrapper = document.querySelector(".cart-lists-wrapper");
         const cartCountNum = document.querySelectorAll(".cart-count-num");
+
+        // 카트에 담긴 상품이 없을때
         if (!cartData || cartData.length === 0) {
           cartModalWrapper.innerHTML = `<p class="no-cart">장바구니에 상품이 없습니다.</p>`;
           cartCountNum.forEach((num) => {
@@ -193,10 +189,19 @@ fetch("/magazine_b/header.html")
             </div>
           `;
           cartModalWrapper.innerHTML += cartListEl;
+        });
 
-          cartCountNum.forEach((num) => {
-            num.textContent = `[${list.cart_count}]`;
-          });
+        // 추가한 상품 총 수량 출력
+        const cartListCountEl = document.querySelectorAll(".cart-count");
+        let cartListCount = 0;
+        cartListCountEl.forEach((count) => {
+          console.log(count.textContent);
+          cartListCount += Number(count.textContent);
+        });
+        console.log(cartListCount);
+
+        cartCountNum.forEach((num) => {
+          num.textContent = `[${cartListCount}]`;
         });
 
         // 카트 상품 삭제
@@ -205,13 +210,13 @@ fetch("/magazine_b/header.html")
           btn.addEventListener("click", function () {
             const cartIdx = Number(this.getAttribute("id").split("-")[1]);
             fetch(
-              `/main_backend/model/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
+              `/magazine_b_back/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
             )
               .then((res) => res.json())
               .then((del) => {
                 console.log(del);
                 alert(del.msg);
-                location.reload();
+                // location.reload();
               })
               .catch((err) => console.log(err));
           });
