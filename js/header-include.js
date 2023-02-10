@@ -153,7 +153,7 @@ fetch("/magazine_b/header.html")
     fetch("/magazine_b_back/cart_ctrl.php?req_cart=get_cart")
       .then((res) => res.json())
       .then((cartData) => {
-        console.log(cartData);
+        // console.log(cartData);
         const cartModalWrapper = document.querySelector(".cart-lists-wrapper");
         const cartCountNum = document.querySelectorAll(".cart-count-num");
 
@@ -168,7 +168,7 @@ fetch("/magazine_b/header.html")
 
         // 추가한 상품 카트에 출력
         cartData.map((list) => {
-          console.log(list);
+          // console.log(list);
           cartListEl = `
             <div class="cart-list">
               <div class="cart-img">
@@ -195,14 +195,23 @@ fetch("/magazine_b/header.html")
         const cartListCountEl = document.querySelectorAll(".cart-count");
         let cartListCount = 0;
         cartListCountEl.forEach((count) => {
-          console.log(count.textContent);
+          // console.log(count.textContent);
           cartListCount += Number(count.textContent);
         });
-        console.log(cartListCount);
+        // console.log(cartListCount);
 
         cartCountNum.forEach((num) => {
           num.textContent = `[${cartListCount}]`;
         });
+
+        // 추가한 상품 합산 가격 출력
+        const checkOutBtn = document.querySelector(".check-out-btn");
+        let cartSumPrice = 0;
+        cartData.forEach((data) => {
+          cartSumPrice += Number(data.cart_sum);
+        });
+        // console.log(cartSumPrice);
+        checkOutBtn.textContent = `￦${cartSumPrice} CHECK OUT`;
 
         // 카트 상품 삭제
         const rmvCartBtn = document.querySelectorAll(".remove-cart");
@@ -216,7 +225,7 @@ fetch("/magazine_b/header.html")
               .then((del) => {
                 console.log(del);
                 alert(del.msg);
-                // location.reload();
+                location.reload();
               })
               .catch((err) => console.log(err));
           });
