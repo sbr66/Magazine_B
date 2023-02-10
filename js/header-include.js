@@ -205,7 +205,7 @@ fetch("/magazine_b/header.html")
         });
 
         // 추가한 상품 합산 가격 출력
-        const checkOutBtn = document.querySelector(".check-out-btn");
+        const checkOutBtn = document.querySelector(".check-out-btn a");
         let cartSumPrice = 0;
         cartData.forEach((data) => {
           cartSumPrice += Number(data.cart_sum);
