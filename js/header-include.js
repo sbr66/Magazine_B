@@ -166,11 +166,11 @@ fetch("/magazine_b/header.html")
           return;
         }
 
-        // 추가한 상품 카트에 출력
+        // 추가한 상품 카트 모달에 출력
         cartData.map((list) => {
           // console.log(list);
           cartListEl = `
-            <div class="cart-list">
+            <div class="cart-list" id="cart-list-${list.cart_idx}">
               <div class="cart-img">
                 <img src="${list.cart_img}" alt="" />
               </div>
@@ -180,7 +180,7 @@ fetch("/magazine_b/header.html")
                 <p>￦${list.cart_sum}</p>
                 <div class="cart-qnts">
                   <i class="ri-subtract-line"></i>
-                  <p class="cart-count">${list.cart_count}</p>
+                  <p class="cart-count" id="cart-count-${list.cart_idx}">${list.cart_count}</p>
                   <i class="ri-add-line"></i>
                 </div>
               </div>
@@ -215,17 +215,89 @@ fetch("/magazine_b/header.html")
 
         // 카트 상품 삭제
         const rmvCartBtn = document.querySelectorAll(".remove-cart");
-        rmvCartBtn.forEach((btn) => {
+        rmvCartBtn.forEach((btn, idx) => {
           btn.addEventListener("click", function () {
             const cartIdx = Number(this.getAttribute("id").split("-")[1]);
+            const listItem = document.querySelector(`#cart-list-${cartIdx}`);
+
+            // const rmvCartCount = document.querySelector(
+            //   `#cart-count-${cartIdx}`
+            // );
+
             fetch(
               `/magazine_b_back/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
             )
               .then((res) => res.json())
-              .then((del) => {
-                console.log(del);
-                alert(del.msg);
-                location.reload();
+              .then((delData) => {
+                // console.log(delData);
+                // if (delData.length === 0) {
+                //   cartModalWrapper.innerHTML = `<p class="no-cart">장바구니에 상품이 없습니다.</p>`;
+                //   cartCountNum.forEach((num) => {
+                //     num.textContent = "[0]";
+                //   });
+                //   return;
+                // }
+                // cartModalWrapper.innerHTML = null;
+                // delData.map((list) => {
+                //   cartListEl = `
+                //     <div class="cart-list" id="cart-list-${list.cart_idx}">
+                //       <div class="cart-img">
+                //         <img src="${list.cart_img}" alt="" />
+                //       </div>
+                //       <div class="cart-info-box">
+                //         <p class="cart-title">${list.cart_name}</p>
+                //         <p>￦${list.cart_sum}</p>
+                //         <div class="cart-qnts">
+                //           <i class="ri-subtract-line"></i>
+                //           <p class="cart-count" id="cart-count-${list.cart_idx}">${list.cart_count}</p>
+                //           <i class="ri-add-line"></i>
+                //         </div>
+                //       </div>
+                //       <i class="ri-close-line remove-cart" id="btn-${list.cart_idx}"></i>
+                //     </div>
+                //   `;
+                //   cartModalWrapper.innerHTML += cartListEl;
+                // });
+                // // 상품 삭제 후 총 수량 출력
+                // const cartListCountEl =
+                //   document.querySelectorAll(".cart-count");
+                // let cartListCount = 0;
+                // cartListCountEl.forEach((count) => {
+                //   // console.log(count.textContent);
+                //   cartListCount += Number(count.textContent);
+                // });
+                // // console.log(cartListCount);
+                // cartCountNum.forEach((num) => {
+                //   num.textContent = `[${cartListCount}]`;
+                // });
+                // // 상품 삭제 후 합산 가격 출력
+                // const checkOutBtn = document.querySelector(".check-out-btn a");
+                // let cartSumPrice = 0;
+                // delData.forEach((data) => {
+                //   cartSumPrice += Number(data.cart_sum);
+                // });
+                // // console.log(cartSumPrice);
+                // checkOutBtn.textContent = `￦${cartSumPrice} CHECK OUT`;
+                // =============================================
+                // alert(del.msg);
+                console.log("삭제 버튼 누른 상품의 데이터 : ", cartData[idx]);
+                listItem.style.display = "none"; // 삭제 버튼 누르면 cart modal에서 상품 안보이게
+                cartCountNum.forEach((num) => {
+                  num.textContent = `[${
+                    Number(num.textContent.replace(/[^0-9]/g, "")) -
+                    Number(cartData[idx].cart_count)
+                  }]`; // 상품 삭제 후 변경된 장바구니 상품 총 수량 출력(cart modal & header)
+                  if (num.textContent == "[0]") {
+                    cartModalWrapper.innerHTML = `<p class="no-cart">장바구니에 상품이 없습니다.</p>`;
+                    checkOutBtn.style.display = "none";
+                    return;
+                  } // 장바구니에 담긴 상품을 모두 삭제했을때 메세지 출력 & Check Out 버튼 안보이게
+                });
+                checkOutBtn.textContent = `￦${
+                  Number(checkOutBtn.textContent.replace(/[^0-9]/g, "")) -
+                  Number(cartData[idx].cart_sum)
+                }
+                 CHECK OUT`; // 상품 삭제 후 변경된 장바구니 상품 가격 합계 출력
               })
               .catch((err) => console.log(err));
           });
