@@ -179,9 +179,9 @@ fetch("/magazine_b/header.html")
                 <p class="cart-title">${list.cart_name}</p>
                 <p>￦${list.cart_sum}</p>
                 <div class="cart-qnts">
-                  <i class="ri-subtract-line"></i>
-                  <p class="cart-count" id="cart-count-${list.cart_idx}">${list.cart_count}</p>
-                  <i class="ri-add-line"></i>
+                  <i class="ri-subtract-line down-btn"></i>
+                  <p class="cart-modal-qnt" id="cart-count-${list.cart_idx}">${list.cart_count}</p>
+                  <i class="ri-add-line up-btn"></i>
                 </div>
               </div>
 
@@ -192,7 +192,7 @@ fetch("/magazine_b/header.html")
         });
 
         // 추가한 상품 총 수량 출력
-        const cartListCountEl = document.querySelectorAll(".cart-count");
+        const cartListCountEl = document.querySelectorAll(".cart-modal-qnt");
         let cartListCount = 0;
         cartListCountEl.forEach((count) => {
           // console.log(count.textContent);
@@ -212,6 +212,35 @@ fetch("/magazine_b/header.html")
         });
         // console.log(cartSumPrice);
         checkOutBtn.textContent = `￦${cartSumPrice} CHECK OUT`;
+
+        // 상품별 수량 변경하기
+        const cartModalUpBtns = document.querySelectorAll(".cart-qnts .up-btn");
+        const cartModalDownBtns = document.querySelectorAll(
+          ".cart-qnts .down-btn"
+        );
+        const cartModalQntEl = document.querySelectorAll(".cart-modal-qnt");
+
+        let cartModalQnt = [];
+        cartModalQntEl.forEach((qnt) => {
+          cartModalQnt.push(Number(qnt.textContent));
+        }); // 장바구니에 담긴 상품들 각각의 수량이 담긴 배열
+        // console.log(cartModalQnt);
+
+        cartModalUpBtns.forEach((btn, idx) => {
+          btn.addEventListener("click", () => {
+            cartModalQnt[idx]++;
+            cartModalQntEl[idx].textContent = cartModalQnt[idx];
+          });
+        });
+
+        cartModalDownBtns.forEach((btn, idx) => {
+          btn.addEventListener("click", () => {
+            if (cartModalQnt[idx] != 1) {
+              cartModalQnt[idx]--;
+              cartModalQntEl[idx].textContent = cartModalQnt[idx];
+            }
+          });
+        });
 
         // 카트 상품 삭제
         const rmvCartBtn = document.querySelectorAll(".remove-cart");
@@ -287,12 +316,14 @@ fetch("/magazine_b/header.html")
                     Number(num.textContent.replace(/[^0-9]/g, "")) -
                     Number(cartData[idx].cart_count)
                   }]`; // 상품 삭제 후 변경된 장바구니 상품 총 수량 출력(cart modal & header)
+
                   if (num.textContent == "[0]") {
                     cartModalWrapper.innerHTML = `<p class="no-cart">장바구니에 상품이 없습니다.</p>`;
                     checkOutBtn.style.display = "none";
                     return;
                   } // 장바구니에 담긴 상품을 모두 삭제했을때 메세지 출력 & Check Out 버튼 안보이게
                 });
+
                 checkOutBtn.textContent = `￦${
                   Number(checkOutBtn.textContent.replace(/[^0-9]/g, "")) -
                   Number(cartData[idx].cart_sum)

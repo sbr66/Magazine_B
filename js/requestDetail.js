@@ -135,9 +135,9 @@ function requestCart() {
   addCartBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       formData.set("cart_count", `${count}`);
-      formData.set("cart_sum", `${count * sumPrice}`);
+      formData.set("cart_sum", `${Number(count * sumPrice)}`);
 
-      // console.log(count, count * sumPrice);
+      console.log(count, count * sumPrice);
 
       fetch("/magazine_b_back/cart_ctrl.php?req_cart=add_cart", {
         method: "POST",
@@ -145,7 +145,7 @@ function requestCart() {
       })
         .then((res) => res.json())
         .then((cart) => {
-          // console.log(cart);
+          console.log(cart);
           alert(cart.msg);
           location.reload();
         })

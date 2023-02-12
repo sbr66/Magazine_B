@@ -13,14 +13,14 @@
 .cart-section .container .cart-lists-form .main-cart-wrapper .main-cart-list .main-cart-img{width: 12%;}
 .cart-section .container .cart-lists-form .main-cart-wrapper .main-cart-list .main-cart-img img{width: 100%;}
 
-.cart-section .container .cart-price-info{width: 35%; border-top: 1px solid #ddd; height: fit-content; position: sticky; top: 5rem;}
-.cart-section .container .cart-price-info > *{width: 100%; display: flex; justify-content: space-between;} 
-.cart-section .container .cart-price-info .price-info{padding: 1rem 0;}
-.cart-section .container .cart-price-info .main-cart-sum p,
-.cart-section .container .cart-price-info .delivery-charge p{color: #999;}
-.cart-section .container .cart-price-info .final-price{font-size: 1.25rem; font-weight: bold;}
+.cart-section .container .cart-pay-info{width: 35%; border-top: 1px solid #ddd; height: fit-content; position: sticky; top: 5rem;}
 
-.cart-section .container .cart-price-info .order-btns{column-gap: .5rem; margin-top: 1.5rem;}
-.cart-section .container .cart-price-info .order-btns .select-order-btn{width: 50%; background: #fff; padding: 1rem 0; border-radius: .25rem; border: 1px solid black; font-size: 1rem;}
-.cart-section .container .cart-price-info .order-btns .all-order-btn{width: 50%; border: none; background: black; color: #fff; padding: 1rem 0; border-radius: .25rem; font-size: 1rem;}
+.cart-section .container .cart-pay-info .price-info{padding: 1rem 0; width: 100%; display: flex; justify-content: space-between;}
+.cart-section .container .cart-pay-info .main-cart-sum p,
+.cart-section .container .cart-pay-info .delivery-charge p{color: #999;}
+.cart-section .container .cart-pay-info .final-price{font-size: 1.25rem; font-weight: bold;}
+
+.cart-section .container .cart-pay-info .order-btns{column-gap: .5rem; margin-top: 1.5rem; width: 100%; display: flex;}
+.cart-section .container .cart-pay-info .order-btns .select-order-btn{width: 50%; background: #fff; padding: 1rem 0; border-radius: .25rem; border: 1px solid black; font-size: 1rem;}
+.cart-section .container .cart-pay-info .order-btns .all-order-btn{width: 50%; border: none; background: black; color: #fff; padding: 1rem 0; border-radius: .25rem; font-size: 1rem;}
 
