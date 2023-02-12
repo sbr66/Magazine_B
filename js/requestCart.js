@@ -7,17 +7,19 @@ fetch("/magazine_b_back/cart_ctrl.php?req_cart=get_cart")
       const cartListEl = `
                     <div class="main-cart-list">
                         <input type="checkbox" name="" value="" />
-                        <div class="main-cart-info">
-                            <p>${list.cart_name}</p>
-                            <p>₩${list.cart_sum}</p>
-                            <div class="main-cart-qnts">
-                                <i class="ri-subtract-line"></i>
-                                <p class="cart-count">${list.cart_count}</p>
-                                <i class="ri-add-line"></i>
-                            </div>
-                        </div>
-                        <div class="main-cart-img">
-                            <img src="${list.cart_img}" alt="" />
+                        <div class="cart-list-content">
+                          <div class="main-cart-info">
+                              <p>${list.cart_name}</p>
+                              <p>₩${list.cart_sum}</p>
+                              <div class="main-cart-qnts">
+                                  <i class="ri-subtract-line"></i>
+                                  <p class="cart-count">${list.cart_count}</p>
+                                  <i class="ri-add-line"></i>
+                              </div>
+                          </div>
+                          <div class="main-cart-img">
+                              <img src="${list.cart_img}" alt="" />
+                          </div>
                         </div>
                     </div>`;
       cartPagelistWrapper.innerHTML += cartListEl;
