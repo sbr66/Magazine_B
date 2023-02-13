@@ -13,7 +13,7 @@ section{padding: 5rem 0; background: #fff;}
 
 .magazine-section > .container{display: flex;}
 
-.magazine-section .container .mag-left{width: 54%; height: 85vh; display: flex; flex-direction: column; justify-content: space-between; position: sticky; top: 7rem;}
+.magazine-section .container .mag-left{width: 54%; height: 75vh; display: flex; flex-direction: column; justify-content: space-between; position: sticky; top: 7rem;}
 /* .magazine-section .container .mag-left .mag-category li{font-size: 2.5rem; cursor: pointer; width: fit-content; transition: all .4s ease; display: flex; flex-direction: column; border: none; background: none; _padding: .25rem 0} */
 .magazine-section .container .mag-left .mag-category button{font-size: 2.5rem; cursor: pointer; transition: all .4s ease; border: none; background: none;}
 .magazine-section .container .mag-left .mag-category button.gray{color: #ccc;}
@@ -29,7 +29,7 @@ section{padding: 5rem 0; background: #fff;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-info{display: flex; column-gap: 1rem; align-items: baseline;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-info > div {color: #222; text-transform: uppercase;}
 .magazine-section .container .mag-products .mag-info-wrapper .mag-info > div a{color: #222;}
-.magazine-section .container .mag-products .mag-info-wrapper .mag-cart-btn{border: none; border-bottom: 1px solid #222; background: #fff; color: #222;}
+.magazine-section .container .mag-products .mag-info-wrapper .mag-cart-btn{border: none; border-bottom: 1px solid #222; background: #fff; color: #222; cursor: pointer;}
 
 .magazine-section .container .mag-right .product-page{display: flex; justify-content: center; column-gap: 1.5rem;}
 .magazine-section .container .mag-right .product-page input{font-size: 1.3rem; background: none; border: none; cursor: pointer;}

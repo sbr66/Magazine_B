@@ -49,8 +49,8 @@ section{padding: 5rem 0;}
 .cart-modal .cart-lists-wrapper .cart-list .cart-info-box .cart-qnts{display: flex; justify-content: space-between; width: 70%; border: 1px solid #fff; padding: .5rem; margin-top: 1rem; align-items: center;}
 .cart-modal .cart-lists-wrapper .cart-list .remove-cart{color: #fff; font-size: 1.5rem;}
 
-.cart-modal button{border: none; background: #222;  width: 100%; text-align: center;  }
-.cart-modal button a{width: 100%; padding: 2rem 0; color: #fff;  font-size: 1.5rem; position: absolute; bottom: 0; left: 0; }
+.cart-modal button{border: none; background: #222; width: 100%; text-align: center;}
+.cart-modal button a{width: 100%; padding: 2rem 0; background: #222; color: #fff;  font-size: 1.5rem; position: absolute; bottom: 0; left: 0; }
 
 /* Mobile Menu Style */
 .header-wrapper .mobile-menu{width: 100%; height: 100vh; padding: 1.25rem 0; background: #222; position: fixed; z-index: -1000; opacity: 0; transition: all .3s ease;}

@@ -370,7 +370,7 @@ fetch("/magazine_b/header.html")
             const cartIdx = Number(this.getAttribute("id").split("-")[1]);
             const listItem = document.querySelector(`#cart-list-${cartIdx}`);
             await fetch(
-              `/magazine_b_back/cart_ctrl.php?req_cart=del_cart&cart_idx=${idx}`
+              `/magazine_b_back/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
             )
               .then((res) => res.json())
               .then((delData) => {

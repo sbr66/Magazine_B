@@ -5,10 +5,10 @@ fetch(`/magazine_b_back/get_products_ex.php${pageUrl}`)
   .then((res) => res.json())
   .then((data) => {
     const productBox = document.querySelector(".mag-products");
-    let dataEl;
-    // console.log(data);
+    console.log(data);
+
     data.map((item) => {
-      dataEl = `
+      let dataEl = `
         <div class="mag-product-item ${item.mag_cate}">
             <div class="prd-img-wrapper">
                 <a href="/magazine_b/detail.html?${item.mag_idx}">
@@ -33,10 +33,42 @@ fetch(`/magazine_b_back/get_products_ex.php${pageUrl}`)
                 <div>${item.mag_cate}</div>
                 <div>₩${item.mag_price}</div>
                 </div>
-                <button class="mag-cart-btn">ADD TO CART</button>
+                <form onsubmit="return false">
+                  <button type="submit" class="mag-cart-btn">ADD TO CART</button>
+                  <input type="hidden" name="cart_idx" value="${item.mag_idx}">
+                  <input type="hidden" name="cart_name" value="${item.mag_title}">
+                  <input type="hidden" name="cart_desc" value="${item.mag_desc}">
+                  <input type="hidden" name="cart_price" value="${item.mag_price}">
+                  <input type="hidden" name="cart_img" value="${item.mag_img1}">
+                  <input type="hidden" name="cart_count" value="1" class="cart-count">
+                  <input type="hidden" name="cart_sum" value="${item.mag_price}" class="cart-sum">
+                </form>
             </div>
         </div>`;
+
       productBox.innerHTML += dataEl;
+
+      const addCartBtn = document.querySelectorAll(".mag-cart-btn");
+
+      addCartBtn.forEach((btn, idx) => {
+        btn.addEventListener("click", () => {
+          const magItemFormEl = document.querySelectorAll(
+            ".mag-info-wrapper form"
+          );
+          const formData = new FormData(magItemFormEl[idx]);
+          fetch("/magazine_b_back/cart_ctrl.php?req_cart=add_cart", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => res.json())
+            .then((cart) => {
+              console.log(cart);
+              alert(cart.msg);
+              location.reload();
+            })
+            .catch((err) => console.log(err));
+        });
+      });
     });
   })
   .catch((err) => console.log(err));
