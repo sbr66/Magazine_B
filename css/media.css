@@ -269,6 +269,20 @@
     /* Cart Page Style */
     .cart-section .container{width: 100%;}
     .cart-section .container .cart-lists-form .main-cart-wrapper .main-cart-list .main-cart-img{width: 7rem;}
+
+    /* Magazine Page Style */
+    .magazine-section > .container{flex-wrap: wrap; margin-top: 4rem;}
+    .magazine-section .container .mag-left{width: 100%; height: auto; position: static;}
+    .magazine-section .container .mag-left .mag-count{justify-content: space-between; margin: 3rem 0 1.5rem;}
+    .magazine-section .container .mag-right{width: 100%;}
+    .magazine-section .container .mag-products .mag-product-item .prd-img-wrapper{padding: 0;}
+    .magazine-section .container .mag-products .mag-product-item .prd-img-wrapper:nth-child(1){padding-right: 2px;}
+    .magazine-section .container .mag-products .mag-product-item .prd-img-wrapper:nth-child(2){padding-left: 2px;}
+    .magazine-section .container .mag-products .mag-product-item .mag-info-wrapper{flex-direction: column; row-gap: 1rem; margin-top: .5rem;}
+    .magazine-section .container .mag-products .mag-info-wrapper .mag-info{flex-wrap: wrap; font-size: 1.2rem;}
+    .magazine-section .container .mag-products .mag-info-wrapper .mag-info .mag-item-price{width: 100%;}
+    .magazine-section .container .mag-products .mag-info-wrapper .mag-cart-btn{font-size: 1.2rem;}
+
 }
 
 @media screen and (max-width: 349px){

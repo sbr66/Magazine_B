@@ -6,8 +6,10 @@ fetch(`/magazine_b_back/get_products_ex.php${pageUrl}`)
   .then((data) => {
     const productBox = document.querySelector(".mag-products");
     console.log(data);
+    const sliceData = data.slice(0, 10);
+    console.log(sliceData);
 
-    data.map((item) => {
+    sliceData.map((item) => {
       let dataEl = `
         <div class="mag-product-item ${item.mag_cate}">
             <div class="prd-img-wrapper">
@@ -31,7 +33,7 @@ fetch(`/magazine_b_back/get_products_ex.php${pageUrl}`)
                 <div><a href="/magazine_b/detail.html?${item.mag_idx}">${item.mag_title}</a></div>
                 <div>ISSUE NO.${item.mag_issue}</div>
                 <div>${item.mag_cate}</div>
-                <div>₩${item.mag_price}</div>
+                <div class="mag-item-price">₩${item.mag_price}</div>
                 </div>
                 <form onsubmit="return false">
                   <button type="submit" class="mag-cart-btn">ADD TO CART</button>
@@ -50,6 +52,7 @@ fetch(`/magazine_b_back/get_products_ex.php${pageUrl}`)
 
       const addCartBtn = document.querySelectorAll(".mag-cart-btn");
 
+      // 장바구니에 상품 추가
       addCartBtn.forEach((btn, idx) => {
         btn.addEventListener("click", () => {
           const magItemFormEl = document.querySelectorAll(
